@@ -50,7 +50,7 @@ section .albums::-webkit-scrollbar-thumb{
     cursor: pointer;
 }
 
-.navegador nav ul .home{
+.navegador nav ul .buscar{
     background-color: rgb(95, 80, 0);
 }
 
@@ -59,9 +59,9 @@ section .albums::-webkit-scrollbar-thumb{
 }
 
 .navegador nav ul li a{
+    padding: 1em;
     color: white;
     font-size: 1.5em;
-    padding: 1em;
 }
 
 .navegador .cancion_actual{
@@ -74,7 +74,7 @@ section .albums::-webkit-scrollbar-thumb{
 .navegador .cancion_actual img{
     width: 250px;
     height: 250px;
-} 
+}
 
 .navegador .cancion_actual i{
     cursor: pointer;
@@ -104,6 +104,37 @@ section .albums::-webkit-scrollbar-thumb{
     justify-content: space-around;
     align-items: center;
     margin-bottom: 1.8rem;
+}
+
+header .buscador{
+    height: 3em;
+    width: 38em;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: .5em;
+    background-color: gray;
+}
+
+header .buscador i{
+    width: 1em;
+    height: 1em;
+    color: black;
+}
+
+header .buscador input{
+    width: 44em;
+    padding: .5em;
+    border: none;
+    font-weight: 900;
+    font-size: 1em;
+    background-color: gray;
+    outline: none;
+}
+
+header .buscador input::placeholder{
+    color: black;
 }
 
 header .perfil{
@@ -153,22 +184,16 @@ section .albums .album{
     text-align: center;
     width: 30%;
     padding: 1em;
-    display: flex;
-    justify-content: center;
-    transition: all .5s ease;
 }
 
 section .albums img{
     width: 200px;
     height: 200px;
-    cursor: pointer; 
-}
-
-section .albums .album i{
     cursor: pointer;
+    transition: all .5s ease;
 }
 
-section .albums .album:hover{
+section .albums img:hover{
     scale: 1.2;
     transition: all .5s ease;
 }
@@ -441,7 +466,6 @@ img{
 
 .navegador nav ul li a{
     font-size: 1em;
-    padding: 0em;
 }
 
 /*---------------------------------------------*/

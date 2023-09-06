@@ -1,0 +1,52 @@
+
+.navegador{
+    width: 18.9%;
+}
+
+.menu{
+    width: 81.1%;
+}
+
+i{
+    cursor: pointer;
+}
+
+section .tabla::-webkit-scrollbar{
+    background-color: black;
+    width: 4px;
+}
+
+section .tabla::-webkit-scrollbar-thumb{
+    background-color: rgb(144, 122, 0);
+}
+
+section .tabla{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-y: scroll;
+    height: 38rem;
+    width: 100%;
+}
+
+.menu section .tabla .fila{
+    display: flex;
+}
+
+.menu section .tabla .fila .columna{
+    border: 1px solid rgba(255, 217, 0, 0.713);
+    width:10em;
+    padding: 1em;
+    font-size: 1.3em;
+}
+
+.menu section .tabla .fila .cancion{
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu section .tabla .fila .cancion i{
+    font-size: 1em;
+    cursor: pointer;
+}
