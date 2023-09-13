@@ -1,0 +1,120 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  --color-gratis: #02b7d0;
+  --color-silver:#eb5396;
+  --color-gold:#f0c50d;
+}
+
+.tick-cross {
+  width: 20px;
+  height: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.planes {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.plan {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 20px;
+  margin: 20px;
+  overflow: hidden;
+}
+
+.plan ul {
+  padding: 20px;
+}
+
+.plan h2 {
+  color: white;
+  width: 100%;
+  margin: 0;
+  height: 50px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.plan li {
+  display: flex;
+  align-items: center;
+}
+
+.plan li p {
+  margin-left: 5px;
+}
+
+.precio {
+  font-size: 50px;
+  font-weight: 900;
+  margin: 0;
+  padding: 40px 20px 20px 20px;
+}
+
+.plan-gratuito .precio {
+  color: var(--color-gratis);
+}
+.plan-silver .precio {
+  color: var(--color-silver);
+}
+.plan-gold .precio {
+  color: var(--color-gold);
+}
+.plan-gratuito h2 {
+  background-color: var(--color-gratis);
+}
+.plan-silver h2 {
+  background-color: var(--color-silver);
+}
+.plan-gold h2 {
+  background-color: var(--color-gold);
+}
+
+.btn-elegir {
+  padding: 10px;
+  margin-bottom: 20px;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  font-size: 20px;
+}
+
+
+.btn-gratis {
+    background-color: var(--color-gratis);
+}
+.btn-silver {
+    background-color: var(--color-silver);
+}
+.btn-gold {
+    background-color: var(--color-gold);
+}
+
+button:hover{
+    transform: scale(1.1);
+}
+
+.cancelar{
+    font-size: 30px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(230, 228, 228);
+}

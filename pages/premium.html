@@ -1,14 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/premium.css">
     <title>Spotify</title>
-</head>
+  </head>
 
-<body>
-
-</body>
-
+  <body>
+    <h1>Planes Premium</h1>
+    <section class="planes">
+      <article class="plan plan-gratuito">
+        <h2>Plan Gratuito</h2>
+        <p class="precio">Gratis</p>
+        <ul>
+          <li>
+            <img class="tick-cross" src="../img/iconos/tick.png" alt="tick" />
+            <p>Música ilimitada</p>
+          </li>
+          <li>
+            <img class="tick-cross" src="../img/iconos/cross.png" alt="cross" />
+            <p>Sin anuncios</p>
+          </li>
+          <li>
+            <img class="tick-cross" src="../img/iconos/cross.png" alt="cross" />
+            <p>Descarga tus canciones favoritas</p>
+          </li>
+        </ul>
+        <button class="btn-elegir btn-gratis" onclick="location.href='../pages/pagar.html'">Elegir</button>
+      </article>
+      <article class="plan plan-silver">
+        <h2>Plan Silver</h2>
+        <p class="precio">$5</p>
+        <ul>
+          <li>
+            <img class="tick-cross" src="../img/iconos/tick.png" alt="tick" />
+            <p>Música ilimitada</p>
+          </li>
+          <li>
+            <img class="tick-cross" src="../img/iconos/tick.png" alt="tick" />
+            <p>Sin anuncios</p>
+          </li>
+          <li>
+            <img class="tick-cross" src="../img/iconos/cross.png" alt="cross" />
+            <p>Descarga tus canciones favoritas</p>
+          </li>
+        </ul>
+        <button class="btn-elegir btn-silver" onclick="location.href='../pages/pagar.html'">Elegir</button>
+      </article>
+      <article class="plan plan-gold">
+        <h2>Plan Gold</h2>
+        <p class="precio">$10</p>
+        <ul>
+          <li>
+            <img class="tick-cross" src="../img/iconos/tick.png" alt="tick" />
+            <p>Música ilimitada</p>
+          </li>
+          <li>
+            <img class="tick-cross" src="../img/iconos/tick.png" alt="tick" />
+            <p>Sin anuncios</p>
+          </li>
+          <li>
+            <img class="tick-cross" src="../img/iconos/tick.png" alt="tick" />
+            <p>Descarga tus canciones favoritas</p>
+          </li>
+        </ul>
+        <button class="btn-elegir btn-gold" onclick="location.href='../pages/pagar.html'">Elegir</button>
+      </article>
+    </section>
+    <button onclick="location.href='../pages/home.html'" class="cancelar">Cancelar</button>
+  </body>
 </html>
