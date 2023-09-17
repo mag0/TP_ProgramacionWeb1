@@ -1,8 +1,8 @@
 .formulario{
-
+    margin-left: 100px;
 }
 
-/*.input__cont {
+.input__cont {
     display: block;
     width: 80%;
     height: calc(1.5em + .75rem + 2px);
@@ -15,4 +15,13 @@
     background-clip: padding-box;
     border: 1px solid #ced4da;
     border-radius: .25rem;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out; }*/
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out; }
+
+.colortext {
+    font-family: 'Barlow Condensed', sans-serif;
+    color: black;
+    font-size: 20px;
+    padding-top: calc(.375rem + 1px);
+    padding-bottom: calc(.375rem + 1px);
+    margin-bottom: 50px;
+    line-height: 1.5; }
