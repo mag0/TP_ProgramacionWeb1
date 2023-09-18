@@ -1,14 +1,9 @@
-
-.navegador{
-    width: 18.9%;
-}
-
-.menu{
-    width: 81.1%;
-}
-
 i{
     cursor: pointer;
+}
+
+h1{
+    text-align: center;
 }
 
 section .tabla::-webkit-scrollbar{
@@ -49,4 +44,73 @@ section .tabla{
 .menu section .tabla .fila .cancion i{
     font-size: 1em;
     cursor: pointer;
+}
+
+
+
+@media screen and (max-width:1024px) {
+    section .tabla{
+        height: 30rem;
+    }
+    
+    .menu section .tabla .fila .columna{
+        width: 8em;
+        padding: .5em;
+        font-size: 1.1em;
+    }
+    
+    .menu section .tabla .fila .cancion i{
+        font-size: .8em;
+    }
+}
+
+@media screen and (max-width:768px) {
+
+    i{
+        font-size: 1.1em;
+    }
+
+    h4{
+        font-size: .9em;
+    }
+
+    section .tabla{
+        height: 28rem;
+    }
+    
+    .menu section .tabla .fila .columna{
+        width: 6.8em;
+        padding: .5em;
+        font-size: 1em;
+    }
+    
+    .menu section .tabla .fila .cancion i{
+        font-size: .6em;
+    }
+}
+
+
+@media screen and (max-width:768px) {
+
+    i{
+        font-size: 1em;
+    }
+
+    h4{
+        font-size: .8em;
+    }
+
+    section .tabla{
+        height: 28rem;
+    }
+    
+    .menu section .tabla .fila .columna{
+        width: 6.1em;
+        padding: .5em;
+        font-size: .8em;
+    }
+    
+    .menu section .tabla .fila .cancion i{
+        font-size: .6em;
+    }
 }

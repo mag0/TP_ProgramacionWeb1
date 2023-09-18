@@ -37,7 +37,7 @@ section .albums::-webkit-scrollbar-thumb{
 .navegador{
     background-color: rgb(42, 42, 42);
     border-radius: 5px;
-    width: 50rem;
+    width: 20%;
     margin: .5rem;
     padding: .5rem;
     display: flex;
@@ -97,6 +97,7 @@ section .albums::-webkit-scrollbar-thumb{
     border-radius: 5px;
     margin: .5rem;
     padding: .5rem;
+    width: 80%;
 }
 
 .menu header{
@@ -144,7 +145,6 @@ section .albums{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    width:100%;
     overflow-y: scroll;
     height: 38rem;
 }
@@ -451,10 +451,11 @@ img{
 /*HEADER*/
 
 .menu{
-    background-color: rgb(42, 42, 42);
-    border-radius: 5px;
-    margin: .0rem;
-    padding: .5rem;
+    background-color: rgb(42, 42, 42);;
+    border-radius: 0px;
+    margin: 0rem;
+    padding: 0rem;
+    width: 100%;
 }
 
 .menu header{
