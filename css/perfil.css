@@ -1,5 +1,14 @@
+.contenedor_pagina{
+   height: auto;
+   width: 100%;
+}
+
+.menu{
+    background-color: rgb(42, 42, 42);
+}
+
 body {
-    min-height: 100vh;
+    height: 100vh;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -16,28 +25,19 @@ body {
     flex-direction: column;
 }
 
-.menu{
-    background-color: rgb(42, 42, 42);
-    border-radius: 5px;
-    margin: .5rem;
-    padding: .5rem;
-}
 
 .formulario{
-    display: flex;
-    margin-left: 100px;
-    justify-content: left;
-    align-items: center;
-    flex-wrap: wrap;
     width:100%;
     overflow-y: scroll;
-    height: 38rem;
+    height: auto;
+    margin-top: 5 rem;
 }
 
 .input__cont {
-    width: 250%;
-    height: calc(1.5em + .75rem + 2px);
+    width: 20rem;
+    height: 2rem;
     padding: .375rem .75rem;
+    margin-left: 10rem;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
@@ -48,25 +48,25 @@ body {
     border-radius: .25rem;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out; }
 
-.colortext {
+.formulario_opcion{
+    width: 25%;
+    display: inline-block;
     font-family: 'Barlow Condensed', sans-serif;
     color: white;
-    font-size: 20px;
-    padding-top: calc(.375rem + 1px);
-    padding-bottom: calc(.375rem + 1px);
-    margin-bottom: 50px;
+    font-size: 1.5rem;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
     line-height: 1.5; }
 
-.cuerpoFormulario {
-    padding-bottom: 30px;
-    padding-left: 40px;
-}
-
-.btn {
+.opcion  {
     padding: 10px;
     margin-bottom: 20px;
     color: white;
     border-radius: 5px;
     border: none;
     font-size: 20px;
+}
+
+.btn {
+
 }
