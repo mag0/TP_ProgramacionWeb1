@@ -2,10 +2,6 @@ i{
     cursor: pointer;
 }
 
-h1{
-    text-align: center;
-}
-
 section .tabla::-webkit-scrollbar{
     background-color: black;
     width: 4px;
@@ -75,7 +71,7 @@ section .tabla{
     }
 
     section .tabla{
-        height: 28rem;
+        height: 30rem;
     }
     
     .menu section .tabla .fila .columna{
