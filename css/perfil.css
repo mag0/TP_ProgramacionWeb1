@@ -1,17 +1,14 @@
 body {
+    background-color: black;
     height: 100%;
     min-height: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    height: 100vh;
   }
-
-.contenedor_pagina{
-   height: auto;
-   min-height: 100%;
-   width: 100%;
-}
 
 
 /*HEADER*/
@@ -58,19 +55,16 @@ header .perfil .foto{
 
 .formulario{
     width:100%;
-    overflow-y: scroll;
     height: auto;
-    margin-top: 5 rem;
+    margin-top: 5rem;
     flex-direction: column;
     flex-wrap: wrap;
-    margin-left: 5%;
 }
 
 .input__cont {
-    width: 50%;
+    width: 40%;
     height: 3rem;
     padding: .375rem .75rem;
-    
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
@@ -79,17 +73,20 @@ header .perfil .foto{
     background-clip: padding-box;
     border: 1px solid #ced4da;
     border-radius: .25rem;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out; }
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out; 
+}
 
 .formulario_opcion{
     width: 25%;
     display: inline-block;
     font-family: 'Barlow Condensed', sans-serif;
-    color: black;
-    font-size: 1.5rem;
+    color: white;
+    font-size: 2rem;
     padding-top: 2rem;
     padding-bottom: 1rem;
-    line-height: 1.5; }
+    line-height: 1.5; 
+    margin-left: 5rem;
+}
 
 .opcion  {
     padding: 2rem;
@@ -104,7 +101,6 @@ header .perfil .foto{
     margin-bottom: 2rem;
 }
 .btn {
-    size: 80rem;
     display: inline-block;
 	text-decoration: none;
 	padding: .5em 1em;
@@ -119,3 +115,51 @@ footer{
     padding: 1rem;
     text-align: center;
 }
+
+
+@media (max-width: 1245px){
+
+    .formulario{
+        text-align: center;
+      }
+  
+      .formulario_opcion{
+          color: white;
+          font-size: 1.75rem;
+          padding-top: 1.5rem;
+          padding-bottom: .75rem;
+          width: 100%;
+          align-items: center;
+          justify-content: center;
+          margin-left: 0rem;
+      }
+
+      .input__cont {
+        width: 60%;
+      }
+  
+  }
+
+  @media (max-width: 720px){
+
+    .formulario{
+      text-align: center;
+    }
+
+    .formulario_opcion{
+        color: white;
+        font-size: 1.5rem;
+        padding-top: 1rem;
+        padding-bottom: .5rem;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0rem;
+    }
+
+    .input__cont {
+        width: 60%;
+    }
+
+}
+  
