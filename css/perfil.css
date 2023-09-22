@@ -24,7 +24,6 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-bottom: 1.8rem;
 }
 
 header .perfil{
@@ -56,7 +55,6 @@ header .perfil .foto{
 .formulario{
     width:100%;
     height: auto;
-    margin-top: 5rem;
     flex-direction: column;
     flex-wrap: wrap;
 }
@@ -81,11 +79,17 @@ header .perfil .foto{
     display: inline-block;
     font-family: 'Barlow Condensed', sans-serif;
     color: white;
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding-top: 2rem;
     padding-bottom: 1rem;
     line-height: 1.5; 
     margin-left: 5rem;
+}
+
+.hipervinculos{
+    text-align: left;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 
 .opcion  {
@@ -94,6 +98,7 @@ header .perfil .foto{
     border-radius: 1rem;
     border: none;
     font-size: 20px;
+    color: rgba(255, 217, 0, 0.713);
 }
 .botones{
     text-align: center;
@@ -103,8 +108,9 @@ header .perfil .foto{
 .btn {
     display: inline-block;
 	text-decoration: none;
-	padding: .5em 1em;
+	padding: 1em 1em 1em 1em;
     text-align: center;
+    margin-right: 2rem;
 }
 
 /*FOOTER*/
@@ -121,22 +127,28 @@ footer{
 
     .formulario{
         text-align: center;
-      }
+    }
   
-      .formulario_opcion{
-          color: white;
-          font-size: 1.75rem;
-          padding-top: 1.5rem;
-          padding-bottom: .75rem;
-          width: 100%;
-          align-items: center;
-          justify-content: center;
-          margin-left: 0rem;
-      }
+    .formulario_opcion{
+        color: white;
+        font-size: 1.25rem;
+        padding-top: 1.5rem;
+        padding-bottom: .75rem;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0rem;
+    }
 
-      .input__cont {
+    .input__cont {
         width: 60%;
-      }
+    }
+
+    .hipervinculos{
+        text-align: center;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
   
   }
 
@@ -148,7 +160,7 @@ footer{
 
     .formulario_opcion{
         color: white;
-        font-size: 1.5rem;
+        font-size: 1rem;
         padding-top: 1rem;
         padding-bottom: .5rem;
         width: 100%;
@@ -159,6 +171,11 @@ footer{
 
     .input__cont {
         width: 60%;
+    }
+    .hipervinculos{
+        text-align: center;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
     }
 
 }
