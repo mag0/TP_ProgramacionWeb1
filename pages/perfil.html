@@ -26,7 +26,7 @@
                 <div class="perfil">
                     <div class="nombre">
                         <h2>Nombre Usuario</h2>
-                        <a href="#">Cerrar sesion</a>
+                        <a href="#" onclick="location.href='../index.html'">Cerrar sesion</a>
                     </div>
                     <div class="foto"></div>
                 </div>
@@ -39,33 +39,33 @@
                     <form>
                         <div>
                             <label for="Usuario" class="formulario_opcion">Usuario</label>
-                              <input type="name" class="input__cont" placeholder="Nombre y Apellido">
+                              <input name="Usuario" type="name" class="input__cont" placeholder="Nombre y Apellido">
                         </div>
                         <div>
                             <label for="inputPassword" class="formulario_opcion">Contraseña</label>
-                              <input type="password" class="input__cont" placeholder="Contraseña">
+                              <input name="inputPassword"type="password" class="input__cont" placeholder="Contraseña">
                         </div>
                         <div>
-                            <label for="Nombre y Apellido" class="formulario_opcion">Repetir Contraseña</label>
-                              <input type="password" class="input__cont" placeholder="Repetir Contraseña">
+                            <label for="repetirContra" class="formulario_opcion">Repetir Contraseña</label>
+                              <input name="repetirContra"type="password" class="input__cont" placeholder="Repetir Contraseña">
                         </div>
                         <div>
-                            <label for="Nombre y Apellido" class="formulario_opcion">Fecha de Nacimiento</label>
-                            <input type="date" class="input__cont" placeholder="00/00/0000">
+                            <label for="fechaNac" class="formulario_opcion">Fecha de Nacimiento</label>
+                            <input name="fechaNac" type="date" class="input__cont" placeholder="00/00/0000">
                         </div>
                         <div>
-                            <label for="inputPassword3" class="formulario_opcion">Mail</label>
-                            <input type="email" class="input__cont" placeholder="Mail">
+                            <label for="mail" class="formulario_opcion">Mail</label>
+                            <input name="mail" type="email" class="input__cont" placeholder="Mail">
                         </div>
                     </form>
                 </div>
-                <div class="botones">
-                    <a href="#" class="opcion">Premium</a>
-                    <a href="#" class="opcion">Eliminar Usuario</a>
+                <div class="hipervinculos">
+                    <a href="#" class="opcion" onclick="location.href='premium.html'">Premium</a>
+                    <a href="#" class="opcion" onclick="location.href='../index.html'">Eliminar Usuario</a>
                 </div>
                 <div class="botones">
-                <button class="btn" onclick="location.href='pages/home.html'">Volver al Home</button>
-                <button class="btn" onclick="">Guardar</button>
+                <button class="btn" onclick="location.href='../pages/home.html'">Volver al Home</button>
+                <button class="btn" onclick="location.href='../pages/home.html'">Guardar</button>
                 </div>    
             </section>
         </div>
