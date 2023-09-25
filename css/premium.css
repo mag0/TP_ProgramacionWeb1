@@ -6,8 +6,8 @@ body {
   align-items: center;
   font-family: Arial, Helvetica, sans-serif;
   --color-gratis: #02b7d0;
-  --color-silver:#eb5396;
-  --color-gold:#f0c50d;
+  --color-silver: #eb5396;
+  --color-gold: #f0c50d;
 }
 
 .tick-cross {
@@ -88,33 +88,47 @@ ul {
   background-color: var(--color-gold);
 }
 
-.btn-elegir {
-  padding: 10px;
+input[type="radio"] {
+  transform: scale(2);
   margin-bottom: 20px;
-  color: white;
-  border-radius: 5px;
+}
+input[type="radio"]:after {
+  background-color: red;
+}
+
+.r-gratis {
+  background-color: var(--color-gratis);
+}
+.r-silver {
+  background-color: var(--color-silver);
+}
+.r-gold {
+  background-color: var(--color-gold);
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+#btns{
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  font-size: 30px;
+  border-radius: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
   border: none;
-  font-size: 20px;
+  color: white;
+  background-color: rgb(230, 228, 228);
 }
 
 
-.btn-gratis {
-    background-color: var(--color-gratis);
+#btn-elegir {
+  background-color: rgb(7, 85, 7);
 }
-.btn-silver {
-    background-color: var(--color-silver);
-}
-.btn-gold {
-    background-color: var(--color-gold);
-}
-
-button:hover{
-    transform: scale(1.1);
-}
-
-.cancelar{
-    font-size: 30px;
-    border-radius: 10px;
-    border: none;
-    background-color: rgb(230, 228, 228);
+#btn-cancelar {
+  background-color: rgb(187, 0, 0);
 }
