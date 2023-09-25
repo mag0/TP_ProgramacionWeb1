@@ -1,14 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Spotilam Pago</title>
+        <link rel="stylesheet" href="./vistapagar.css"/>
+    </head>
+    <body>
+        <div class="menu">
+            <header>            
+                    <div class ="perfil">
+                        <div class="nombre">
+                            <!-- Nombre del usuario -->
+                            <h2>Nombre del Usuario</h2>                  
+                            <!-- Botón para cerrar sesión -->
+                            <a href="../index.html">Cerrar Sesión</a>
+                        </div>
+                        <div class="avatar">
+                            <!-- Avatar del usuario -->
+                            <img src="./assets/avatar_user.png" alt="Avatar del usuario"/>
+                        </div>                     
+                    </div>    
+            </header>
+            <main>  
+                <div class = "titulo">
+                    <h2>Elegiste el plan PREMIUM</h2>
+                </div>             
+                <section class="plan">          
+                        <article class ='imagen'><img src="./assets/premium.jpg" alt="imagen premium"/></article>                   
+                        <article class = "card">
+                            <div class="cardHeader">
+                                <h1>599,00 ARS</h1>
+                                <p>Primer mes gratis</p>
+                            </div>
+                            <div class="cardBody">
+                                <p>✔  1 cuenta Premium verificada </p>
+                                <p>✔  Descuento para estudiantes que cumplen con los requisitos </p>
+                                <p>✔  Cancelá cuando quieras</p>
+                                <p>✔ Te enviaremos un recordatorio 7 días antes de cobrarte</p>
+                            </div>    
+                        </article>
+                </section>
+                <section class="pago">
+                    <form  method="post">
+                        <h2>Información de Pago</h2>
+                        <label for="numero_tarjeta">Número de Tarjeta:</label>
+                        <input type="number" id="numero_tarjeta" name="numero_tarjeta" required>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spotify</title>
-</head>
+                        <label for="vto">VTO:</label>
+                        <input type="date" id="vto" name="vto" required>
 
-<body>
+                        <label for="cvc">CVC:</label>
+                        <input type="number" id="cvc" name="cvc" required>
 
-</body>
-
+                        <label for="nombre_apellido">Nombre y Apellido:</label>
+                        <input type="text" id="nombre_apellido" name="nombre_apellido" required>
+                        
+                        <button type="submit" onclick="window.location.href='home.html'">Pagar</button>
+                        <button type="button"  onclick="window.location.href='home.html'">Cancelar</button>  
+                    </form>
+                </section>
+            </main>
+        </div>
+        <footer>
+            <p>
+                Integrantes 1 (Nombre, apellido y DNI) -
+                Integrantes 2 (Nombre, apellido y DNI) -
+                Integrantes 3 (Nombre, apellido y DNI)
+            </p>
+            <p>
+                Integrantes 4 (Nombre, apellido y DNI) -
+                Integrantes 5 (Nombre, apellido y DNI)
+            </p>
+    
+        </footer>   
+    </body>
 </html>
