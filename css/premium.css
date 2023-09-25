@@ -91,6 +91,7 @@ ul {
 input[type="radio"] {
   transform: scale(2);
   margin-bottom: 20px;
+  cursor: pointer;
 }
 input[type="radio"]:after {
   background-color: red;
@@ -123,6 +124,7 @@ button:hover {
   border: none;
   color: white;
   background-color: rgb(230, 228, 228);
+  cursor: pointer;
 }
 
 
