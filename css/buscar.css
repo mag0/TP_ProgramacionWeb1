@@ -39,16 +39,20 @@ header .buscador input::placeholder{
 
 
 @media screen and (max-width: 768px){
-    
-    
+
+
 /*---------------------------------------------*/
-/*MENU*/
-    
-    
+/*MENU*/ 
+
 /*HEADER*/
-    
+
+header .buscador i{
+    font-size: 1.5em;
+}
+
 header .buscador{
     width: 15em;
+    height: 2.5em;
 }
     
 header .buscador input{
