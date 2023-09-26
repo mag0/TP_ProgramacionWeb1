@@ -6,7 +6,7 @@ body{
 
 main{
     background-color: rgb(42, 42, 42);
-    margin: .8rem;
+    margin: .5em;
     height: 88%;
     display: flex;
     justify-content: center;
@@ -39,6 +39,7 @@ button{
     font-size: .6em;
     margin: .5em 0;
 }
+
 
 @media screen and (max-width:768px) {
 

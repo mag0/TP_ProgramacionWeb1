@@ -57,6 +57,10 @@ h1{
     text-align: center;
 }
 
+h2{
+    color: white;
+}
+
 h3{
     color: black;
     font-size: 2em;
@@ -73,11 +77,11 @@ button{
 
 footer{
     background-color: rgb(42, 42, 42);
-    margin: .5rem;
-    padding: 1rem;
+    margin: .5em;
+    padding: 1em;
     text-align: center;
     color: white;
-    border-radius: 1em;
+    border-radius: .5em;
 }
 
 
