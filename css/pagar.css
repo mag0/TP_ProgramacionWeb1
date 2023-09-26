@@ -9,15 +9,19 @@ body{
 
 .menu{
     background-color: rgb(42, 42, 42);
-    border-radius: 5px;
+    border-radius: .5em;
     margin: .5em;
 }
 
 
 .menu header{
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    justify-content: end;
+}
+
+header div{
+    margin-top: 1em;
+    margin-right: 1em;
 }
 
 header .perfil{

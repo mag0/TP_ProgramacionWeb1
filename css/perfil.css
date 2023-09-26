@@ -5,7 +5,15 @@ body {
     align-items: center;
     color: white;
     height: 100vh;
-    }
+}
+
+.menu header{
+    justify-content: end;
+}
+
+header div{
+    margin-right: 1em;
+}
 
 
 /*SECTION*/
