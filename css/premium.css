@@ -1,13 +1,20 @@
-body {
-  min-height: 100vh;
+
+main {
+  min-height: 76vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: Arial, Helvetica, sans-serif;
-  --color-gratis: #02b7d0;
-  --color-silver: #eb5396;
-  --color-gold: #f0c50d;
+  background-color: rgb(42, 42, 42);
+  color: white;
+  margin: .5rem;
+  margin-top: 0;
+}
+
+header{
+  margin: .5rem;
+  margin-bottom: 0;
+  padding: 1em;
 }
 
 .tick-cross {
@@ -32,14 +39,14 @@ ul {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
+  border: 1px solid rgba(255, 217, 0, 0.713);
   border-radius: 20px;
   margin: 20px;
   overflow: hidden;
 }
 
 .plan ul {
-  padding: 20px;
+  padding: 50px 40px;
 }
 
 .plan h2 {
@@ -51,6 +58,7 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: var(--color-gold);
 }
 
 .plan li {
@@ -69,68 +77,43 @@ ul {
   padding: 40px 20px 20px 20px;
 }
 
-.plan-gratuito .precio {
-  color: var(--color-gratis);
-}
-.plan-silver .precio {
-  color: var(--color-silver);
-}
-.plan-gold .precio {
-  color: var(--color-gold);
-}
-.plan-gratuito h2 {
-  background-color: var(--color-gratis);
-}
-.plan-silver h2 {
-  background-color: var(--color-silver);
-}
-.plan-gold h2 {
-  background-color: var(--color-gold);
-}
-
 input[type="radio"] {
   transform: scale(2);
   margin-bottom: 20px;
   cursor: pointer;
-}
-input[type="radio"]:after {
-  background-color: red;
-}
-
-.r-gratis {
-  background-color: var(--color-gratis);
-}
-.r-silver {
-  background-color: var(--color-silver);
-}
-.r-gold {
-  background-color: var(--color-gold);
 }
 
 button:hover {
   transform: scale(1.1);
 }
 
-#btns{
-  display: flex;
-  justify-content: center;
-}
-
 .btn {
-  font-size: 30px;
-  border-radius: 10px;
+  font-size: 25px;
   margin-left: 5px;
   margin-right: 5px;
-  border: none;
-  color: white;
-  background-color: rgb(230, 228, 228);
-  cursor: pointer;
 }
 
 
-#btn-elegir {
-  background-color: rgb(7, 85, 7);
-}
-#btn-cancelar {
-  background-color: rgb(187, 0, 0);
+@media screen and (max-width: 425px) {
+
+  header{
+    margin: 0;
+  }
+
+  main{
+    margin: 0;
+  }
+
+  .planes{
+    flex-direction: column;
+  }
+
+  .nombre{
+    text-align: center;
+  }
+
+  footer{
+    margin: 0;
+    border-radius: 0;
+  }
 }

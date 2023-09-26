@@ -3,5 +3,87 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    list-style: none;
+    --color-gold: rgb(95, 80, 0);
+    --color-gris-oscuro: rgb(42, 42, 42);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body{
+    background-color: black;
+}
+
+.menu header, header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--color-gris-oscuro);
+    margin-bottom: 1rem;
+}
+
+header .perfil{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .perfil .nombre h2{
+    font-size: 1.4em;
+    margin-bottom: .3em;
+}
+
+header .perfil .nombre a{
+    color: rgba(255, 217, 0, 0.713);
+}
+
+header .perfil .foto{
+    width: 70px;
+    margin: 0 1em;
+    height: 70px;
+    background-color: rgba(255, 217, 0, 0.713);
+    cursor: pointer;
+}
+
+header .perfil .foto img{
+    width: 70px;
+    height: 70px;
+}
+
+a{
+    color: rgba(255, 217, 0, 0.713);
+}
+
+h1{
+    color: white;
+    text-align: center;
+}
+
+h3{
+    color: black;
+    font-size: 2em;
+}
+
+button{
+    cursor: pointer;
+    padding: .4em .5em;
+    background-color: var(--color-gold);
+    border: none;
+    color: white;
+    font-size: 1em;
+}
+
+footer{
+    background-color: rgb(42, 42, 42);
+    margin: .5rem;
+    padding: 1rem;
+    text-align: center;
+    color: white;
+    border-radius: 1em;
+}
+
+
+
+@media screen and (max-width: 425px) {
+    header{
+        margin: 0;
+    }
 }

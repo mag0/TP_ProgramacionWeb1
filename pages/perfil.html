@@ -18,17 +18,14 @@
 
             <header>
 
-                <div>
-                    <h1>SPOTILAM</h1>
-                </div>
-
-
                 <div class="perfil">
                     <div class="nombre">
                         <h2>Nombre Usuario</h2>
                         <a href="#" onclick="location.href='../index.html'">Cerrar sesion</a>
                     </div>
-                    <div class="foto"></div>
+                    <a class="foto" href="perfil.html">
+                        <img src="../img/avatar_user.png" alt="Avatar del usuario" />
+                    </a>
                 </div>
 
             </header>
@@ -38,24 +35,28 @@
                 <div class="formulario">
                     <form>
                         <div>
-                            <label for="Usuario" class="formulario_opcion">Usuario</label>
-                              <input name="Usuario" type="name" class="input__cont" placeholder="Nombre y Apellido">
+                            <label for="usuario" class="formulario_opcion">Usuario</label>
+                            <input id="usuario" name="usuario" type="name" class="input__cont"
+                                placeholder="Nombre y Apellido">
                         </div>
                         <div>
                             <label for="inputPassword" class="formulario_opcion">Contraseña</label>
-                              <input name="inputPassword"type="password" class="input__cont" placeholder="Contraseña">
+                            <input id="inputPassword" name="inputPassword" type="password" class="input__cont"
+                                placeholder="Contraseña">
                         </div>
                         <div>
                             <label for="repetirContra" class="formulario_opcion">Repetir Contraseña</label>
-                              <input name="repetirContra"type="password" class="input__cont" placeholder="Repetir Contraseña">
+                            <input id="repetirContra" name="repetirContra" type="password" class="input__cont"
+                                placeholder="Repetir Contraseña">
                         </div>
                         <div>
                             <label for="fechaNac" class="formulario_opcion">Fecha de Nacimiento</label>
-                            <input name="fechaNac" type="date" class="input__cont" placeholder="00/00/0000">
+                            <input id="fechaNac" name="fechaNac" type="date" class="input__cont"
+                                placeholder="00/00/0000">
                         </div>
                         <div>
-                            <label for="mail" class="formulario_opcion">Mail</label>
-                            <input name="mail" type="email" class="input__cont" placeholder="Mail">
+                            <label for="mail" class="formulario_opcion">Email</label>
+                            <input id="mail" name="mail" type="email" class="input__cont" placeholder="Email">
                         </div>
                     </form>
                 </div>
@@ -64,9 +65,9 @@
                     <a href="#" class="opcion" onclick="location.href='../index.html'">Eliminar Usuario</a>
                 </div>
                 <div class="botones">
-                <button class="btn" onclick="location.href='../pages/home.html'">Volver al Home</button>
-                <button class="btn" onclick="location.href='../pages/home.html'">Guardar</button>
-                </div>    
+                    <button class="btn" onclick="location.href='../pages/home.html'">Volver al Home</button>
+                    <button class="btn" onclick="location.href='../pages/home.html'">Guardar</button>
+                </div>
             </section>
         </div>
     </div>
@@ -74,13 +75,13 @@
     <footer>
 
         <p>
-            Integrantes 1 (Nombre, apellido y DNI) -
-            Integrantes 2 (Nombre, apellido y DNI) -
-            Integrantes 3 (Nombre, apellido y DNI)
+            Guerreiro Martín Andrés, 41646090 -
+            Alimonta Axel Ian, 37864941 -
+            Pretto Paseiro Gian Franco, 41077146
         </p>
         <p>
-            Integrantes 4 (Nombre, apellido y DNI) -
-            Integrantes 5 (Nombre, apellido y DNI)
+            Taylor Darío Javier, 38157667 -
+            Della Vella Julián 35722388
         </p>
 
     </footer>

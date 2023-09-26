@@ -29,39 +29,16 @@ main section input{
     font-size: .5em;
 }
 
-main section button{
-    text-align: center;
-    font-size: .75em;
-    border-radius: 10px;
-    background-color: white;
-    margin-bottom: 1em;
-    cursor: pointer;
-}
-
-main section .boton:hover{
-    background-color: black;
-    color: white;
-}
-
 main section .registrar{
     text-align: center;
     font-size: .7em;
     color: rgb(95, 80, 0);
 }
 
-footer{
-    border-radius: 1em;
-    margin: .8rem;
-    background-color: rgb(42, 42, 42);
-    height: 8%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+button{
+    font-size: .6em;
+    margin: .5em 0;
 }
-
-
 
 @media screen and (max-width:768px) {
 

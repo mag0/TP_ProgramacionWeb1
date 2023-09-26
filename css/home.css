@@ -2,7 +2,6 @@
 /*GENERAL*/
 
 body{
-    background-color: black;
     color: white;
     height: 100vh;
 }
@@ -23,15 +22,11 @@ section .albums::-webkit-scrollbar{
 }
 
 section .albums::-webkit-scrollbar-thumb{
-    background-color: rgb(144, 122, 0);
+    background-color: var(--color-gold);
 }
 
 .contenedor_pagina{
     display: flex;
-}
-
-h1{
-    text-align: center;
 }
 
 
@@ -39,7 +34,7 @@ h1{
 /*NAVEGADOR*/
 
 .navegador{
-    background-color: rgb(42, 42, 42);
+    background-color: var(--color-gris-oscuro);
     border-radius: 5px;
     width: 20%;
     margin: .5rem;
@@ -49,35 +44,42 @@ h1{
 }
 
 .navegador nav ul li{
-    border: 2px solid rgb(95, 80, 0);
-    padding: 2em 1em;
+    border: 2px solid var(--color-gold);
+    /* padding: 2em 1em; */
     cursor: pointer;
+    display: flex;
+    justify-content: start;
 }
 
 .navegador nav ul .home{
-    background-color: rgb(95, 80, 0);
+    background-color: var(--color-gold);
 }
 
 .navegador nav ul .buscar{
-    background-color: rgb(95, 80, 0);
+    background-color: var(--color-gold);
 }
 
 .navegador nav ul .misFavoritas{
-    background-color: rgb(95, 80, 0);
+    background-color: var(--color-gold);
 }
 
 .navegador nav ul .albums_favoritos{
-    background-color: rgb(95, 80, 0);
+    background-color: var(--color-gold);
+}
+
+.navegador nav ul .menu_responsive{
+    display: none;
 }
 
 .navegador nav ul li:hover{
-    background-color: rgb(95, 80, 0);
+    background-color: var(--color-gold);
 }
 
 .navegador nav ul li a{
     color: white;
     font-size: 1.5em;
     padding: 1em;
+    width: 100%;
 }
 
 .navegador .cancion_actual{
@@ -114,36 +116,6 @@ h1{
     margin: .5rem;
     padding: .5rem;
     width: 80%;
-}
-
-.menu header{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 1.8rem;
-}
-
-header .perfil{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-header .perfil .nombre h2{
-    font-size: 1.4em;
-    margin-bottom: .3em;
-}
-
-header .perfil .nombre a{
-    color: rgba(255, 217, 0, 0.713);
-}
-
-header .perfil .foto{
-    width: 70px;
-    margin: 0 1em;
-    height: 70px;
-    background-color: rgba(255, 217, 0, 0.713);
-    cursor: pointer;
 }
 
 .menu .musica-sonando{
@@ -247,15 +219,6 @@ header{
     margin-bottom: 0rem;
 }
 
-header .buscador{
-    height: 2.5em;
-    width: 34em;
-}
-
-header .buscador input{
-    width: 40em;
-}
-
 header .perfil .nombre h2{
     font-size: 1.2em;
     margin-bottom: .2em;
@@ -323,25 +286,6 @@ header{
     margin-bottom: 1rem;
 }
 
-header .buscador{
-    height: 2.3em;
-    width: 30em;
-    position: relative;
-}
-
-header .buscador input{
-    width: 40em;
-    height: 2em;
-    margin-left: 1.2em;
-}
-
-header .buscador i{
-    position: absolute;
-    width: .5em;
-    height: .5em;
-    top: .3em;
-}
-
 header .perfil .nombre h2{
     font-size: 1.1em;
     margin-bottom: .2em;
@@ -371,14 +315,14 @@ section audio{
 
 
 @media screen and (max-width: 768px){
-   
+
 i{
     font-size: 1.2em;
 }
 
 /*---------------------------------------------*/
 /*NAVEGADOR*/
-    
+
 .navegador nav ul li a{
     font-size: .9em;
 }
@@ -398,16 +342,6 @@ i{
     
     
 /*HEADER*/
-    
-header .buscador{
-    width: 15em;
-}
-    
-header .buscador input{
-    width: 13em;
-    height: 2em;
-    margin-left: 1.2em;
-}
     
 header .perfil .nombre h2{
     font-size: 1em;
@@ -464,11 +398,23 @@ img{
     padding: 0em;
 }
 
+.navegador nav ul .menu_responsive{
+    display: block;
+}
+
+.navegador nav ul .menu_responsive{
+    display: block;
+}
+
 /*---------------------------------------------*/
 /*MENU*/
 
 
 /*HEADER*/
+
+.menu header{
+    display: none;
+}
 
 .menu{
     background-color: rgb(42, 42, 42);;
@@ -532,5 +478,6 @@ section audio{
 footer{
     margin: 0;
     font-size: .8em;
+    border-radius: 0;
 }
 }

@@ -37,9 +37,14 @@ header .buscador input::placeholder{
     color: black;
 }
 
+@media screen and (max-width: 1024px){
+    header .buscador{
+        width: 20em;
+    }
+}
+
 
 @media screen and (max-width: 768px){
-
 
 /*---------------------------------------------*/
 /*MENU*/ 
@@ -56,7 +61,7 @@ header .buscador{
 }
     
 header .buscador input{
-    width: 13em;
+    width: 10em;
     height: 2em;
     margin-left: 1.2em;
 }   
@@ -71,6 +76,13 @@ header .buscador input{
 
 /*HEADER*/
 
+.menu header{
+    display: flex;
+}
+
+.menu header .perfil{
+    display: none;
+}
 
 header .buscador{
     height: 2em;
