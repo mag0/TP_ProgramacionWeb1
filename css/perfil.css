@@ -50,6 +50,10 @@ header div{
 
 .hipervinculos{
     margin: 3em 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 .opcion  {
