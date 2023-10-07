@@ -1,96 +1,57 @@
-i{
-    cursor: pointer;
+.contenedor_pagina{
+    height: 90%;
 }
 
-section .tabla::-webkit-scrollbar{
-    background-color: black;
-    width: 4px;
+.contenedor-tabla{
+    height: 90%;
 }
 
-section .tabla::-webkit-scrollbar-thumb{
-    background-color: rgb(144, 122, 0);
+.tabla{
+    width: 80%;
+    height: 100%;
 }
 
-section .tabla{
+.tabla .fila{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow-y: scroll;
-    height: 38rem;
     width: 100%;
+    height: 16.7%;
 }
 
-.menu section .tabla .fila{
+.tabla .fila .columna{
     display: flex;
-}
-
-.menu section .tabla .fila .columna{
+    justify-content: space-around;
+    align-items: center;
+    width: 20%;
     border: 1px solid rgba(255, 217, 0, 0.713);
-    width:10em;
-    padding: 1em;
     font-size: 1.3em;
 }
 
-.menu section .tabla .fila .cancion{
-    display: flex;
-    justify-content: space-between;
+@media screen and (max-width:1440px) {
+    .tabla .fila .columna{
+        font-size: .9em;
+    }
 }
-
-.menu section .tabla .fila .cancion i{
-    font-size: 1em;
-    cursor: pointer;
-}
-
-
 
 @media screen and (max-width:1024px) {
-    section .tabla{
-        height: 35em;
-    }
-    
-    .menu section .tabla .fila .columna{
-        width: 8em;
-        padding: .5em;
-        font-size: 1.1em;
-    }
-    
-    .menu section .tabla .fila .cancion i{
-        font-size: .8em;
+    .tabla .fila .columna{
+        font-size: .7em;
     }
 }
 
 @media screen and (max-width:768px) {
-
-    i{
-        font-size: 1em;
+    .tabla{
+        width: 100%;
+        height: 100%;
     }
 
-    h4{
-        font-size: .85em;
-    }
-
-    section .tabla{
-        height: 29rem;
-    }
-    
-    .menu section .tabla .fila .columna{
-        width: 6.8em;
-        padding: .6em;
-        font-size: 1em;
-    }
-    
-    .menu section .tabla .fila .cancion i{
-        font-size: .8em;
+    .tabla .fila .columna{
+        font-size: .6em;
     }
 }
 
 @media screen and (max-width:425px) {
 
-    .menu section .tabla .fila .columna{
-        width: 6.4em;
-        padding: .5em;
-        font-size: .8em;
+    .tabla .fila{
+        height: 22%;
     }
-
 }
