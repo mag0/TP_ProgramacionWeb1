@@ -84,7 +84,6 @@ section .albums::-webkit-scrollbar-thumb{
 
 .navegador .cancion_actual{
     margin: 1em 0;
-    text-align: center;
     display: flex;
     justify-content: center;
 }
@@ -94,8 +93,8 @@ section .albums::-webkit-scrollbar-thumb{
 }
 
 .navegador .cancion_actual img{
-    width: 250px;
-    height: 250px;
+    width: 15em;
+    height: 20em;
 } 
 
 .navegador .cancion_actual i{
@@ -208,8 +207,8 @@ footer{
 }
 
 .navegador .cancion_actual img{
-    width: 220px;
-    height: 220px;
+    width: 12em;
+    height: 12em;
 }
 
 .navegador p{
@@ -275,8 +274,8 @@ section audio{
 }
 
 .navegador .cancion_actual img{
-    width: 180px;
-    height: 180px;
+    width: 10em;
+    height: 10em;
 }
 
 .navegador p{
@@ -336,8 +335,8 @@ i{
 }
     
 .navegador .cancion_actual img{
-    width: 140px;
-    height: 140px;
+    width: 6em;
+    height: 8em;
 }
     
 .navegador p{
@@ -410,6 +409,11 @@ img{
 .navegador nav ul li a{
     font-size: 1em;
     padding: 0em;
+}
+
+.navegador .cancion_actual img{
+    width: 9em;
+    height: 9em;
 }
 
 .navegador nav ul .menu_responsive{
