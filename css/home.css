@@ -266,6 +266,10 @@ section audio{
 
 @media screen and (max-width: 1024px){
     
+h1{
+    font-size: 1.5em;
+}
+
 /*---------------------------------------------*/
 /*NAVEGADOR*/
 
@@ -327,11 +331,16 @@ i{
     font-size: 1.2em;
 }
 
+h1{
+    font-size: 1.2em;
+}
+
 /*---------------------------------------------*/
 /*NAVEGADOR*/
 
 .navegador nav ul li a{
-    font-size: 1.1em;
+    font-size: 1em;
+    padding: 1em .2em;
 }
     
 .navegador .cancion_actual img{
@@ -356,7 +365,7 @@ header .perfil .nombre h2{
 }
     
 header .perfil .nombre a{
-    font-size: 1em;
+    font-size: .8em;
 }
     
 /*SECTION*/
@@ -369,7 +378,8 @@ section .albums .album{
 
 section audio{
     width: 20em;
-    height: 3em;
+    height: 2.5em;
+    margin: .5em;
 }
 
 /*FOOTER*/
