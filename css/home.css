@@ -143,6 +143,7 @@ section .albums{
     flex-wrap: wrap;
     overflow-y: scroll;
     height: 38rem;
+    width: 100%;
 }
 
 section .albums .album{
