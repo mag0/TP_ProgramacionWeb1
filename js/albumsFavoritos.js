@@ -1,17 +1,11 @@
-let usuarios = [
-  { nombre: "jose", contrasenia: "1234", canFav: [1, 2, 3, 4] },
-  { nombre: "messi", contrasenia: "1234", canFav: [] },
-];
+// let usuarios = [
+//   { nombre: "jose", contrasenia: "1234", canFav: [1, 2, 3, 4] },
+//   { nombre: "messi", contrasenia: "1234", canFav: [] },
+// ];
 
-let albums = [
-  { id: 1, nombre: "imagine_dragons" },
-  { id: 2, nombre: "imagine_dragons" },
-  { id: 3, nombre: "imagine_dragons" },
-  { id: 4, nombre: "imagine_dragons" },
-  { id: 5, nombre: "imagine_dragons" },
-  { id: 6, nombre: "imagine_dragons" },
-  { id: 7, nombre: "imagine_dragons" },
-];
+let usuarios = JSON.parse(localStorage.getItem("usuarios"));
+
+let albums = JSON.parse(localStorage.getItem("albums"));
 
 let canciones = [
   { id: 1, nombre: "cancion1" },
@@ -47,8 +41,7 @@ star.forEach(function (star) {
     usuarios[idxUsuario].canFav = cancionesFavoritas;
     star.classList = "far fa-star estrella";
     star.parentNode.parentNode.remove();
-
-    console.log(usuarios[idxUsuario].canFav);
+    localStorage.setItem("usuarios", JSON.stringify(usuarios));
   });
 });
 

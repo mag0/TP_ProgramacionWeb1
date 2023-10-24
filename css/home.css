@@ -138,8 +138,7 @@ section{
 
 section .albums{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    
     flex-wrap: wrap;
     overflow-y: scroll;
     height: 38rem;
@@ -169,11 +168,6 @@ section .albums .album i{
     cursor: pointer;
     position: absolute;
     right: 0;
-}
-
-section .albums .album:hover{
-    scale: 1.2;
-    transition: all .5s ease;
 }
 
 section audio{
