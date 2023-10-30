@@ -69,6 +69,7 @@ function registrarUsuario() {
     email: email.value,
     fecha_de_nacimiento: fechaDeNacimiento.value,
     canFav: [],
+    albumFav: [],
   };
 
   usuarios.push(usuario);

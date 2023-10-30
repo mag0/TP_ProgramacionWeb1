@@ -21,7 +21,7 @@ for (let i = 0; i < albums.length; i++) {
   if (esFavorito(idAlbum, usuarioLogueado)) {
     contenedorAlbums.innerHTML += `<div id="${idAlbum}" class="album">
     <a class="a" href="#">
-        <img id="imagine_dragons" src="../img/albums/${albums[i].nombre}.jpg" alt="">
+        <img onClick = 'location.href = "./musicaSonando.html"' id="imagine_dragons" src="${albums[i].loc}" alt="${albums[i].nombre}">
         <i class="fas fa-star estrella"></i>
     </a>
   </div>`;
