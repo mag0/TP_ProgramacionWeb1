@@ -1,4 +1,5 @@
 let usuarios = JSON.parse(localStorage.getItem("usuarios"));
+console.log(usuarios);
 if (usuarios == null) {
   localStorage.setItem("usuarios", "[]");
   usuarios = JSON.parse(localStorage.getItem("usuarios"));
