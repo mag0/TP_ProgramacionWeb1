@@ -24,27 +24,28 @@ albums.id = 2;
 
 albums.forEach(function (album) {
   canFav.forEach(function (cancion) {
+    console.log(cancion);
     if (album.id == cancion) {
       console.log(cancion.nombre);
-      contenedorCanFav.innerHTML += ` <div class="fila">
-                                        <div class="columna">
-                                            <a href="musicaSonando.html"><i class="fas fa-play"></i></a>
-                                        </div>
-                                        <div class="columna cancion">
-                                            <p>Cancion 2</p>
-                                            <i class="fas fa-star"></i>
-                                        </div>
-                                        <div class="columna cancion">
-                                            <p>Album 1</p>
-                                            <i class="fas fa-star"></i>
-                                        </div>
-                                        <div class="columna">
-                                            <p>4:00</p>
-                                        </div>
-                                        <div class="columna">
-                                            <p>1500</p>
-                                        </div>
-                                    </div>`;
+      contenedorCanFav.innerHTML += `<div class="fila">
+    <div class="columna">
+    <a href="musicaSonando.html"><i class="fas fa-play"></i></a>
+    </div>
+  <div class="columna cancion">
+    <p>${cancion.nombre}</p>
+    <i class="fas fa-star"></i>
+  </div>
+    <div class="columna cancion">
+    <p>Album 1</p>
+    <i class="fas fa-star"></i>
+  </div>
+  <div class="columna">
+  <p>4:00</p>
+  </div>
+    <div class="columna">
+      <p>1500</p>
+    </div>
+  </div>`;
     }
   });
 });

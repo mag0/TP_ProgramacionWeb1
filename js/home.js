@@ -11,7 +11,7 @@ let usuarioLogueado = localStorage.getItem("usuarioConectado");
 
 for (let i = 0; i < albums.length; i++) {
   let idAlbum = albums[i].id;
-  if (!esFavorito(idAlbum, "jose")) {
+  if (!esFavorito(idAlbum, usuarioLogueado)) {
     contenedorAlbums.innerHTML += `<div id="${idAlbum}" class="album">
   <a class="a" href="#">
       <img onClick = 'location.href = "./musicaSonando.html"' id="imagine_dragons" src="${albums[i].loc}" alt="">

@@ -8,7 +8,6 @@ let albumss = JSON.parse(localStorage.getItem("albums"));
 let listaAlbums = document.querySelectorAll(".album");
 
 const cerrarSesion = document.getElementById("cerrarSesion");
-
 cerrarSesion.addEventListener("click", () => {
   localStorage.setItem("conectado", false);
 });

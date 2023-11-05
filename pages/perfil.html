@@ -21,8 +21,8 @@
 
                 <div class="perfil">
                     <div class="nombre">
-                        <h2>Nombre Usuario</h2>
-                        <a href="#" onclick="location.href='../index.html'">Cerrar sesion</a>
+                        <h2 id="nombreUsuario">Nombre Usuario</h2>
+                        <a id="cerrarSesion" href="../index.html">Cerrar sesion</a>
                     </div>
                     <a class="foto" href="perfil.html">
                         <img src="../img/avatar_user.png" alt="Avatar del usuario" />
@@ -34,7 +34,7 @@
             <section>
 
                 <div class="formulario">
-                    <form>
+                    <form method="get">
                         <div>
                             <label for="usuario" class="formulario_opcion">Usuario</label>
                             <input id="usuario" name="usuario" type="name" class="input__cont"
@@ -42,12 +42,12 @@
                         </div>
                         <div>
                             <label for="inputPassword" class="formulario_opcion">Contraseña</label>
-                            <input id="inputPassword" name="inputPassword" type="password" class="input__cont"
+                            <input id="inputPassword" name="inputPassword" type="text" class="input__cont"
                                 placeholder="Contraseña">
                         </div>
                         <div>
                             <label for="repetirContra" class="formulario_opcion">Repetir Contraseña</label>
-                            <input id="repetirContra" name="repetirContra" type="password" class="input__cont"
+                            <input id="repetirContra" name="repetirContra" type="text" class="input__cont"
                                 placeholder="Repetir Contraseña">
                         </div>
                         <div>
@@ -59,6 +59,7 @@
                             <label for="mail" class="formulario_opcion">Email</label>
                             <input id="mail" name="mail" type="email" class="input__cont" placeholder="Email">
                         </div>
+                        <div id="msj" style="font-size: .8em;text-align: center;color: rgb(246, 82, 82);"></div>
                     </form>
                 </div>
                 <div class="hipervinculos">
@@ -67,7 +68,7 @@
                 </div>
                 <div class="botones">
                     <button class="btn" onclick="location.href='../pages/home.html'">Volver al Home</button>
-                    <button class="btn" onclick="location.href='../pages/home.html'">Guardar</button>
+                    <button id="btn" class="btn">Guardar</button>
                 </div>
             </section>
         </div>
@@ -86,7 +87,7 @@
         </p>
 
     </footer>
-    <script src="../js/script.js"></script>
+    <script src="../js/perfil.js"></script>
 </body>
 
 </html>
