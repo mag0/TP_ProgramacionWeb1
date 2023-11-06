@@ -21,7 +21,7 @@ function esAlbumFav(idx) {
     let idxUsr = buscarUsuario(usuarioActivo)
     let siEs = false
 
-    usuarios[idxUsr].albumFav.forEach(e => {
+    usuarioss[idxUsr].albumFav.forEach(e => {
         if (e == idx)
             siEs = true
     })
@@ -156,17 +156,21 @@ function quitarAlbumFav() {
 }
 
 let musicaSonandoStar = document.getElementById("musicaSonandoStar")
+console.log(musicaSonandoStar);
 
 musicaSonandoStar.addEventListener("click", d => {
+    
   let idAlbum = musicaSonando
   let idxUsuario = buscarUsr(usuario)
   if (esAlbumFav(idAlbum)) {
+    console.log("entroIf");
     let cancionesFavoritas = usuarioss[idxUsuario].albumFav.filter((e) => {
       return e != idAlbum;
     });
     usuarioss[idxUsuario].albumFav = cancionesFavoritas;
     musicaSonandoStar.classList = "far fa-star";
-  } else {
+} else {
+    console.log("entroElse");
     usuarioss[idxUsuario].albumFav.push(idAlbum);
     musicaSonandoStar.classList = "fas fa-star";
   }

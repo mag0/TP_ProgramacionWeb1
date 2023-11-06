@@ -3,7 +3,8 @@
 }
 
 .contenedor-tabla{
-    height: 90%;
+    padding-top: 20px;
+    height: 80%;
     overflow-y: scroll;
 }
 
@@ -20,7 +21,8 @@
 
 .tabla .fila .columna{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 5px;
     align-items: center;
     width: 20%;
     border: 1px solid rgba(255, 217, 0, 0.713);

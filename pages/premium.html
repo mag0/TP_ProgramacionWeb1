@@ -10,26 +10,14 @@
 </head>
 
 <body>
-  <header>
-
-    <div class="perfil">
-      <div class="nombre">
-        <h2>Nombre Usuario</h2>
-        <a href="../index.html">Cerrar sesion</a>
-      </div>
-      <a class="foto" href="perfil.html">
-        <img src="../img/avatar_user.png" alt="Avatar del usuario" />
-      </a>
-    </div>
-
-  </header>
+  
   <main>
     <h1>Planes Premium</h1>
-    <section class="planes">
+    <form class="planes" method="get">
       <article class="plan plan-gratuito">
-        <h2>Plan Gratuito</h2>
-        <p class="precio">Gratis</p>
-        <ul>
+        <h2>Plan Bronce</h2>
+        <p class="precio">$1</p>
+        <ul id="ulBronce">
           <li>
             <img class="tick-cross" src="../img/iconos/tick.png" alt="tick" />
             <p>Música ilimitada</p>
@@ -43,12 +31,12 @@
             <p>Descarga tus canciones favoritas</p>
           </li>
         </ul>
-        <input type="radio" name="plan-elegido" id="r-gratis" />
+        <input type="radio" name="plan-elegido" id="plan1" />
       </article>
       <article class="plan plan-silver">
         <h2>Plan Silver</h2>
         <p class="precio">$5</p>
-        <ul>
+        <ul id="ulPlata">
           <li>
             <img class="tick-cross" src="../img/iconos/tick.png" alt="tick" />
             <p>Música ilimitada</p>
@@ -62,12 +50,12 @@
             <p>Descarga tus canciones favoritas</p>
           </li>
         </ul>
-        <input type="radio" name="plan-elegido" id="r-silver" />
+        <input type="radio" name="plan-elegido" id="plan2" />
       </article>
       <article class="plan plan-gold">
         <h2>Plan Gold</h2>
         <p class="precio">$10</p>
-        <ul>
+        <ul id="ulOro">
           <li>
             <img class="tick-cross" src="../img/iconos/tick.png" alt="tick" />
             <p>Música ilimitada</p>
@@ -81,9 +69,9 @@
             <p>Descarga tus canciones favoritas</p>
           </li>
         </ul>
-        <input type="radio" name="plan-elegido" id="r-gold" />
+        <input type="radio" name="plan-elegido" id="plan3" />
       </article>
-    </section>
+    </form>
     <section id="btns">
       <button class="btn" id="btn-elegir" onclick="location.href='../pages/pagar.html'">
         Elegir
@@ -108,7 +96,7 @@
     </p>
 
   </footer>
-  <script src="../js/script.js"></script>
+  <script src="../js/premium.js"></script>
 </body>
 
 </html>

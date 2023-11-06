@@ -34,17 +34,23 @@ star.forEach(function (star) {
     let idAlbum = star.parentNode.parentNode.id;
     let idxUsuario = buscarUsuario(usuarioLogueado);
 
+    console.log(musicaSonando)
+
     if (esFavorito(idAlbum, usuarioLogueado)) {
       let cancionesFavoritas = usuarios[idxUsuario].albumFav.filter((e) => {
         return e != idAlbum;
       });
       usuarios[idxUsuario].albumFav = cancionesFavoritas;
       star.classList = "far fa-star estrella";
-      musicaSonandoStar.classList = "far fa-star";
+      if (idAlbum == musicaSonando) {
+        musicaSonandoStar.classList = "far fa-star";
+      }
     } else {
       usuarios[idxUsuario].albumFav.push(idAlbum);
       star.classList = "fas fa-star estrella";
-      musicaSonandoStar.classList = "fas fa-star";
+      if (idAlbum == musicaSonando) {
+        musicaSonandoStar.classList = "fas fa-star";
+      }
     }
     localStorage.setItem("usuarios", JSON.stringify(usuarios));
   });

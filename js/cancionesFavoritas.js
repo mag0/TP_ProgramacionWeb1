@@ -5,6 +5,7 @@ let canciones = JSON.parse(localStorage.getItem("canciones"));
 let contCanciones = document.querySelector("#tabla")
 let musicaSonandoStar = document.getElementById("musicaSonandoStar")
 
+
 function esCancionFav(idx) {
   let idxUsr = buscarUsuario(usuarioActivo)
   let siEs = false
@@ -59,7 +60,7 @@ function renderizarCanciones() {
     if (esCancionFav(idCancion, usuarioActivo)) {
       contCanciones.innerHTML += ` <div class="fila">
       <div class="columna">
-          <a href="musicaSonando.html"><i class="fas fa-play"></i></a>
+          <a><i id="playy${canciones[i].album}" class="fas fa-play btnPlay"></i></a>
       </div>
       <div class="columna cancion">
           <p>${canciones[i].nombre}</p>
@@ -114,10 +115,8 @@ let estrellasAlbums = document.querySelectorAll(".starAlbum")
 
 estrellasAlbums.forEach(e => {
   let idAlbum = extraerIDAlbum(e.className)
-  console.log(idAlbum);
   // let estrellaMismoAlbum = document.querySelectorAll(`[class = '${e.id}']`)
   let estrellaMismoAlbum = document.querySelectorAll(`.album${idAlbum}`)
-  console.log(estrellaMismoAlbum);
   e.addEventListener("click", event => {
     event.preventDefault()
     if (esAlbumFav(idAlbum)) {
@@ -127,7 +126,7 @@ estrellasAlbums.forEach(e => {
         e.className = "far fa-star starAlbum"
       })
 
-      if(idAlbum == musicaSonando){
+      if (idAlbum == musicaSonando) {
         musicaSonandoStar.classList = "far fa-star";
       }
       localStorage.setItem("usuarios", JSON.stringify(usuarios))
@@ -138,7 +137,7 @@ estrellasAlbums.forEach(e => {
         e.className = "fas fa-star starAlbum"
       })
 
-      if(idAlbum == musicaSonando){
+      if (idAlbum == musicaSonando) {
         musicaSonandoStar.classList = "fas fa-star";
       }
 
@@ -184,11 +183,19 @@ musicaSonandoStar.addEventListener("click", d => {
     estrellaEnAlbum.forEach(e => {
       e.classList = `album${idAlbum} fas fa-star estrella starAlbum`
     });
-    
+
     musicaSonandoStar.classList = "fas fa-star";
   }
   localStorage.setItem("usuarios", JSON.stringify(usuarioss));
 
 })
 
-document.querySelector
+let playBtns = document.querySelectorAll(".btnPlay")
+playBtns.forEach(e=>{
+
+  e.addEventListener("click",(a)=>{
+    a.preventDefault()
+    localStorage.setItem("musicaSonando",extraerIDAlbum(e.id))
+    location.href="../pages/musicaSonando.html"
+  })
+})
