@@ -1,29 +1,95 @@
-// ARCHIVO JAVASCRIPT PRINCIPAL
 let usuario = localStorage.getItem("usuarioConectado");
 const nombreUsuario = document.getElementById("nombreUsuario");
-let musicaSonando = JSON.parse(localStorage.getItem("musicaSonando"));
-let cancion_actual_html = document.getElementById("cancion_actual");
+let musicaSonando = localStorage.getItem("musicaSonando");
+
+
 nombreUsuario.textContent = usuario;
 let albumss = JSON.parse(localStorage.getItem("albums"));
-let listaAlbums = document.querySelectorAll(".album");
+let navegador = document.querySelector(".navegador")
+let usuarioss = JSON.parse(localStorage.getItem("usuarios"))
+
 
 const cerrarSesion = document.getElementById("cerrarSesion");
 cerrarSesion.addEventListener("click", () => {
   localStorage.setItem("conectado", false);
 });
 
-if (!musicaSonando) {
-  cancion_actual_html.style.display = "none";
-} else {
-  cancion_actual_html.innerHTML = `<div>
-      <img src="${musicaSonando.loc}" alt="${musicaSonando.nombre}">
-      <i class="far fa-star"></i>
-</div>
-<p class="descripcion">
-${musicaSonando.nombre}  
-</p>`;
+
+function buscarUsr(usuarioLogueado) {
+  return usuarioss.findIndex((e) => {
+    return (e.usuarioLogueado = usuarioLogueado);
+  });
 }
 
-listaAlbums.forEach((e) => {
-  e.addEventListener("click", () => {});
-});
+function esFavorito(id, usuarioLogueado) {
+  let idx = buscarUsr(usuarioLogueado);
+
+  for (let i = 0; i < usuarioss[idx].albumFav.length; i++) {
+    if (usuarioss[idx].albumFav[i] == id) {
+      return true;
+    }
+  }
+  return false;
+}
+
+
+
+
+let album
+albumss.forEach(e => {
+  if (e.id == musicaSonando)
+    album = e
+})
+
+if (musicaSonando) {
+  navegador.innerHTML += `
+  <div class="cancion_actual">
+  <div>
+    <img src=${album.loc}
+     alt="cancion_actual" />
+    <i class="${esFavorito(musicaSonando, usuario) ? 'fas' : 'far'} fa-star" id="musicaSonandoStar"></i>
+  </div>
+  </div>
+  <p id="descripcion">
+  ${album.nombre}
+  </p>
+  `
+}
+
+let musicaSonandoStar = document.getElementById("musicaSonandoStar")
+
+
+musicaSonandoStar.addEventListener("click", d => {
+  let idAlbum = musicaSonando
+  let idxUsuario = buscarUsr(usuario)
+  if (esFav(idAlbum, usuario)) {
+    let cancionesFavoritas = usuarioss[idxUsuario].albumFav.filter((e) => {
+      return e != idAlbum;
+    });
+    usuarioss[idxUsuario].albumFav = cancionesFavoritas;
+    musicaSonandoStar.classList = "far fa-star";
+  } else {
+    usuarioss[idxUsuario].albumFav.push(idAlbum);
+    musicaSonandoStar.classList = "fas fa-star";
+  }
+  localStorage.setItem("usuarios", JSON.stringify(usuarioss));
+
+})
+
+
+function buscarUsr(usuarioLogueado) {
+  return usuarioss.findIndex((e) => {
+    return (e.usuarioLogueado = usuarioLogueado);
+  });
+}
+
+function esFav(id, usuarioLogueado) {
+  let idx = buscarUsr(usuarioLogueado);
+
+  for (let i = 0; i < usuarioss[idx].albumFav.length; i++) {
+    if (usuarioss[idx].albumFav[i] == id) {
+      return true;
+    }
+  }
+  return false;
+}

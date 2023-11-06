@@ -14,11 +14,11 @@ const email = document.getElementById("mail");
 const fechaDeNacimiento = document.getElementById("fechaNac");
 const msj = document.getElementById("msj");
 const btn = document.getElementById("btn");
+const elimUsr = document.getElementById("eliminarUsr")
 
 nombre.value = usuarios[buscarUsuario(usuarioConectado)].nombre;
-contrasenia.value = usuarios[buscarUsuario(usuarioConectado)].contrasenia;
-contrasenia_espejo.value =
-  usuarios[buscarUsuario(usuarioConectado)].contrasenia;
+contrasenia.value = ""
+contrasenia_espejo.value = ""
 email.value = usuarios[buscarUsuario(usuarioConectado)].email;
 fechaDeNacimiento.value =
   usuarios[buscarUsuario(usuarioConectado)].fecha_de_nacimiento;
@@ -27,12 +27,14 @@ btn.addEventListener("click", (e) => {
   e.preventDefault();
   if (!campoVacios() && usuarioValido(nombre.value) && contraseniasIguales()) {
     registrarUsuario();
-    location.href = "../index.html";
+    location.href = "./home.html";
   }
 });
 
 function usuarioValido(nombre) {
   let usuarioValido = true;
+  if (usuarioConectado == nombre)
+    return true
   usuarios.forEach((e) => {
     if (e.nombre == nombre) {
       usuarioValido = false;
@@ -77,25 +79,40 @@ function codificarContrasenia(cad) {
 }
 
 function registrarUsuario() {
-  delete usuarios[buscarUsuario(usuarioConectado)];
+
   let usuario = {
     nombre: nombre.value,
     contrasenia: codificarContrasenia(contrasenia.value),
     email: email.value,
     fecha_de_nacimiento: fechaDeNacimiento.value,
-    canFav: [],
-    albumFav: [],
+    canFav: usuarios[buscarUsuario(usuarioConectado)].canFav,
+    albumFav: usuarios[buscarUsuario(usuarioConectado)].albumFav,
   };
-
+  eliminarUsr(usuarioConectado)
   usuarios.push(usuario);
+  localStorage.setItem("usuarioConectado", nombre.value)
   localStorage.setItem("usuarios", JSON.stringify(usuarios));
 }
-console.log(buscarUsuario(usuarioConectado));
 function buscarUsuario(usuarioConectado) {
   return usuarios.findIndex((e) => {
     return (e.usuarioConectado = usuarioConectado);
   });
 }
+
+function eliminarUsr(nombreUsr) {
+  usuarios = usuarios.filter(e => {
+    return e.nombre != nombreUsr
+  })
+  localStorage.setItem("usuarios", JSON.stringify(usuarios))
+  localStorage.setItem("conectado", false)
+}
+
+elimUsr.addEventListener("click", e => {
+  e.preventDefault()
+  eliminarUsr(usuarioConectado)
+  location.href = "../index.html"
+})
+
 //la funcion buscarUsuario da el primer indice y no el q debe ser
 //boton eliminar
 //modal

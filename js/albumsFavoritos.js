@@ -1,32 +1,32 @@
-// let usuarios = [
-//   { nombre: "jose", contrasenia: "1234", canFav: [1, 2, 3, 4] },
-//   { nombre: "messi", contrasenia: "1234", canFav: [] },
-// ];
-
 let usuarios = JSON.parse(localStorage.getItem("usuarios"));
-
 let albums = JSON.parse(localStorage.getItem("albums"));
+let usuarioLogueado = localStorage.getItem("usuarioConectado")
 
-let canciones = [
-  { id: 1, nombre: "cancion1" },
-  { id: 2, nombre: "cancion2" },
-];
-let cancionesFav = [1];
 const favorito = false;
 const contenedorAlbums = document.getElementById("albums");
-let usuarioLogueado = "jose;";
 
 for (let i = 0; i < albums.length; i++) {
   let idAlbum = albums[i].id;
   if (esFavorito(idAlbum, usuarioLogueado)) {
     contenedorAlbums.innerHTML += `<div id="${idAlbum}" class="album">
     <a class="a" href="#">
-        <img onClick = 'location.href = "./musicaSonando.html"' id="imagine_dragons" src="${albums[i].loc}" alt="${albums[i].nombre}">
+        <img  src="${albums[i].loc}" alt="${albums[i].nombre}">
         <i class="fas fa-star estrella"></i>
     </a>
   </div>`;
   }
 }
+
+const albumsArr = document.querySelectorAll(".album a img");
+
+albumsArr.forEach(e => {
+  e.addEventListener("click", d => {
+    let idAlbm = e.parentNode.parentNode.id
+    console.log(idAlbm);
+    localStorage.setItem("musicaSonando", idAlbm)
+    location.href = "./musicaSonando.html"
+  })
+})
 
 const star = document.querySelectorAll(".estrella");
 
@@ -35,10 +35,10 @@ star.forEach(function (star) {
     let idAlbum = star.parentNode.parentNode.id;
     let idxUsuario = buscarUsuario(usuarioLogueado);
 
-    let cancionesFavoritas = usuarios[idxUsuario].canFav.filter((e) => {
+    let cancionesFavoritas = usuarios[idxUsuario].albumFav.filter((e) => {
       return e != idAlbum;
     });
-    usuarios[idxUsuario].canFav = cancionesFavoritas;
+    usuarios[idxUsuario].albumFav = cancionesFavoritas;
     star.classList = "far fa-star estrella";
     star.parentNode.parentNode.remove();
     localStorage.setItem("usuarios", JSON.stringify(usuarios));
@@ -54,8 +54,8 @@ function buscarUsuario(usuarioLogueado) {
 function esFavorito(id, usuarioLogueado) {
   let idx = buscarUsuario(usuarioLogueado);
 
-  for (let i = 0; i < usuarios[idx].canFav.length; i++) {
-    if (usuarios[idx].canFav[i] == id) {
+  for (let i = 0; i < usuarios[idx].albumFav.length; i++) {
+    if (usuarios[idx].albumFav[i] == id) {
       return true;
     }
   }

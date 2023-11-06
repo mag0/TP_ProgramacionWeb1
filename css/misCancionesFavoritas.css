@@ -4,6 +4,7 @@
 
 .contenedor-tabla{
     height: 90%;
+    overflow-y: scroll;
 }
 
 .tabla{

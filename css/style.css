@@ -91,3 +91,8 @@ footer{
         margin: 0;
     }
 }
+
+.cancion_actual div img{
+    object-fit: cover;
+}
+
