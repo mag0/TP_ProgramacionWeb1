@@ -3,7 +3,7 @@ let usuarioActivo = localStorage.getItem("usuarioConectado");
 let albums = JSON.parse(localStorage.getItem("albums"));
 let canciones = JSON.parse(localStorage.getItem("canciones"));
 let contCanciones = document.querySelector("#tabla")
-
+let musicaSonandoStar = document.getElementById("musicaSonandoStar")
 
 function esCancionFav(idx) {
   let idxUsr = buscarUsuario(usuarioActivo)
@@ -67,7 +67,7 @@ function renderizarCanciones() {
       </div>
       <div class="columna cancion">
           <p>${canciones[i].nombreAlbum}</p>
-          <i id='album${canciones[i].album}' class="${esAlbumFav(canciones[i].album) ? 'fas' : 'far'} fa-star starAlbum"></i>
+          <i class="album${canciones[i].album} ${esAlbumFav(canciones[i].album) ? 'fas' : 'far'} fa-star starAlbum"></i>
           
       </div>
       <div class="columna">
@@ -111,23 +111,37 @@ function quitarCancionDeFav(id) {
 
 let estrellasAlbums = document.querySelectorAll(".starAlbum")
 
+
 estrellasAlbums.forEach(e => {
-  let idAlbum = extraerIDAlbum(e.id)
+  let idAlbum = extraerIDAlbum(e.className)
+  console.log(idAlbum);
+  // let estrellaMismoAlbum = document.querySelectorAll(`[class = '${e.id}']`)
+  let estrellaMismoAlbum = document.querySelectorAll(`.album${idAlbum}`)
+  console.log(estrellaMismoAlbum);
   e.addEventListener("click", event => {
     event.preventDefault()
     if (esAlbumFav(idAlbum)) {
       quitarAlbumFav(idAlbum)
-      estrellasAlbums.forEach(e => {
+
+      estrellaMismoAlbum.forEach(e => {
         e.className = "far fa-star starAlbum"
       })
 
+      if(idAlbum == musicaSonando){
+        musicaSonandoStar.classList = "far fa-star";
+      }
       localStorage.setItem("usuarios", JSON.stringify(usuarios))
     } else {
       agregarAlbumFav(idAlbum)
 
-      estrellasAlbums.forEach(e => {
+      estrellaMismoAlbum.forEach(e => {
         e.className = "fas fa-star starAlbum"
       })
+
+      if(idAlbum == musicaSonando){
+        musicaSonandoStar.classList = "fas fa-star";
+      }
+
       localStorage.setItem("usuarios", JSON.stringify(usuarios))
     }
 
@@ -147,8 +161,34 @@ function quitarAlbumFav(id) {
 }
 
 
-
 function extraerIDAlbum(cad) {
   return parseInt(cad.slice(5))
 }
 
+
+musicaSonandoStar.addEventListener("click", d => {
+  let idAlbum = musicaSonando
+  let idxUsuario = buscarUsr(usuario)
+  let estrellaEnAlbum = document.querySelectorAll(`#album${musicaSonando}`)
+  if (esAlbumFav(idAlbum)) {
+    let albumsFavoritas = usuarioss[idxUsuario].albumFav.filter((e) => {
+      return e != idAlbum;
+    });
+    usuarioss[idxUsuario].albumFav = albumsFavoritas;
+    estrellaEnAlbum.forEach(e => {
+      e.classList = `album${idAlbum} far fa-star estrella starAlbum`
+    });
+    musicaSonandoStar.classList = "far fa-star";
+  } else {
+    usuarioss[idxUsuario].albumFav.push(idAlbum);
+    estrellaEnAlbum.forEach(e => {
+      e.classList = `album${idAlbum} fas fa-star estrella starAlbum`
+    });
+    
+    musicaSonandoStar.classList = "fas fa-star";
+  }
+  localStorage.setItem("usuarios", JSON.stringify(usuarioss));
+
+})
+
+document.querySelector

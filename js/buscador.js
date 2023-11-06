@@ -33,3 +33,22 @@ function agregarELsonando(){
   })
 }
 
+let musicaSonandoStar = document.getElementById("musicaSonandoStar")
+
+
+musicaSonandoStar.addEventListener("click", d => {
+  let idAlbum = musicaSonando
+  let idxUsuario = buscarUsr(usuario)
+  if (esFav(idAlbum, usuario)) {
+    let cancionesFavoritas = usuarioss[idxUsuario].albumFav.filter((e) => {
+      return e != idAlbum;
+    });
+    usuarioss[idxUsuario].albumFav = cancionesFavoritas;
+    musicaSonandoStar.classList = "far fa-star";
+  } else {
+    usuarioss[idxUsuario].albumFav.push(idAlbum);
+    musicaSonandoStar.classList = "fas fa-star";
+  }
+  localStorage.setItem("usuarios", JSON.stringify(usuarioss));
+
+})
