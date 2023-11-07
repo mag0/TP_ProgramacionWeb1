@@ -151,26 +151,25 @@ estrellasAlbums.forEach(e => {
       quitarAlbumFav(idAlbum)
 
       estrellaMismoAlbum.forEach(e => {
-        e.className = "far fa-star starAlbum"
+        e.className = `album${idAlbum} far fa-star starAlbum starr${idAlbum}`
       })
 
       if (idAlbum == musicaSonando) {
         musicaSonandoStar.classList = "far fa-star";
       }
-      localStorage.setItem("usuarios", JSON.stringify(usuarios))
     } else {
       agregarAlbumFav(idAlbum)
 
       estrellaMismoAlbum.forEach(e => {
-        e.className = "fas fa-star starAlbum"
+        e.className = `album${idAlbum} fas fa-star starAlbum starr${idAlbum}`
       })
 
       if (idAlbum == musicaSonando) {
         musicaSonandoStar.classList = "fas fa-star";
       }
 
-      localStorage.setItem("usuarios", JSON.stringify(usuarios))
     }
+    localStorage.setItem("usuarios", JSON.stringify(usuarios))
 
   })
 })

@@ -54,7 +54,7 @@ let canciones = [
     nombreAlbum: "Imagine Dragons",
     album: 1,
     duracion: "3:08",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 2,
@@ -62,7 +62,7 @@ let canciones = [
     nombreAlbum: "Imagine Dragons",
     album: 1,
     duracion: "1:57",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 3,
@@ -70,7 +70,7 @@ let canciones = [
     nombreAlbum: "Imagine Dragons",
     album: 1,
     duracion: "4:00",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 4,
@@ -78,7 +78,7 @@ let canciones = [
     nombreAlbum: "Imagine Dragons",
     album: 1,
     duracion: "2:57",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 5,
@@ -86,7 +86,7 @@ let canciones = [
     nombreAlbum: "Imagine Dragons",
     album: 1,
     duracion: "3:12",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 6,
@@ -94,7 +94,7 @@ let canciones = [
     nombreAlbum: "Imagine Dragons",
     album: 1,
     duracion: "4:01",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 7,
@@ -102,7 +102,7 @@ let canciones = [
     nombreAlbum: "Imagine Dragons",
     album: 1,
     duracion: "3:55",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 8,
@@ -110,7 +110,7 @@ let canciones = [
     nombreAlbum: "Imagine Dragons",
     album: 1,
     duracion: "3:37",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 9,
@@ -118,7 +118,7 @@ let canciones = [
     nombreAlbum: "Imagine Dragons",
     album: 1,
     duracion: "3:43",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 10,
@@ -126,7 +126,7 @@ let canciones = [
     nombreAlbum: "Imagine Dragons",
     album: 1,
     duracion: "3:29",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 11,
@@ -134,7 +134,7 @@ let canciones = [
     nombreAlbum: "Imagine Dragons",
     album: 1,
     duracion: "8:56",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 12,
@@ -142,7 +142,7 @@ let canciones = [
     duracion: "2:53",
     album: 2,
     nombreAlbum: "Maroon 5",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 13,
@@ -150,7 +150,7 @@ let canciones = [
     duracion: "3:26",
     album: 2,
     nombreAlbum: "Maroon 5",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 14,
@@ -158,7 +158,7 @@ let canciones = [
     duracion: "3:01",
     album: 2,
     nombreAlbum: "Maroon 5",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 15,
@@ -166,7 +166,7 @@ let canciones = [
     duracion: "4:17",
     album: 2,
     nombreAlbum: "Maroon 5",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 16,
@@ -174,7 +174,7 @@ let canciones = [
     duracion: "3:18",
     album: 2,
     nombreAlbum: "Maroon 5",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 17,
@@ -182,7 +182,7 @@ let canciones = [
     duracion: "4:11",
     album: 2,
     nombreAlbum: "Maroon 5",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 18,
@@ -190,7 +190,7 @@ let canciones = [
     duracion: "3:59",
     album: 2,
     nombreAlbum: "Maroon 5",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 19,
@@ -198,7 +198,7 @@ let canciones = [
     duracion: "4:06",
     album: 2,
     nombreAlbum: "Maroon 5",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 20,
@@ -206,7 +206,7 @@ let canciones = [
     duracion: "4:55",
     album: 2,
     nombreAlbum: "Maroon 5",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 21,
@@ -214,7 +214,7 @@ let canciones = [
     duracion: "3:02",
     album: 2,
     nombreAlbum: "Maroon 5",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 22,
@@ -222,7 +222,7 @@ let canciones = [
     duracion: "4:21",
     album: 2,
     nombreAlbum: "Maroon 5",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 23,
@@ -230,7 +230,7 @@ let canciones = [
     duracion: "4:31",
     album: 2,
     nombreAlbum: "Maroon 5",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 24,
@@ -238,7 +238,7 @@ let canciones = [
     duracion: "5:29",
     album: 3,
     nombreAlbum: "Metallica",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 25,
@@ -246,7 +246,7 @@ let canciones = [
     duracion: "8:35",
     album: 3,
     nombreAlbum: "Metallica",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 26,
@@ -254,7 +254,7 @@ let canciones = [
     duracion: "6:56",
     album: 3,
     nombreAlbum: "Metallica",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 27,
@@ -262,7 +262,7 @@ let canciones = [
     duracion: "6:26",
     album: 3,
     nombreAlbum: "Metallica",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 28,
@@ -270,7 +270,7 @@ let canciones = [
     duracion: "7:24",
     album: 3,
     nombreAlbum: "Metallica",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 29,
@@ -278,7 +278,7 @@ let canciones = [
     duracion: "5:24",
     album: 3,
     nombreAlbum: "Metallica",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 30,
@@ -286,7 +286,7 @@ let canciones = [
     duracion: "6:55",
     album: 3,
     nombreAlbum: "Metallica",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 31,
@@ -294,7 +294,7 @@ let canciones = [
     duracion: "5:10",
     album: 3,
     nombreAlbum: "Metallica",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 32,
@@ -302,7 +302,7 @@ let canciones = [
     duracion: "6:29",
     album: 3,
     nombreAlbum: "Metallica",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 33,
@@ -310,7 +310,7 @@ let canciones = [
     duracion: "7:56",
     album: 3,
     nombreAlbum: "Metallica",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 34,
@@ -318,7 +318,7 @@ let canciones = [
     duracion: "5:50",
     album: 3,
     nombreAlbum: "Metallica",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 35,
@@ -326,7 +326,7 @@ let canciones = [
     duracion: "3:18",
     album: 4,
     nombreAlbum: "One Direction",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 36,
@@ -334,7 +334,7 @@ let canciones = [
     duracion: "4:05",
     album: 4,
     nombreAlbum: "One Direction",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 37,
@@ -342,7 +342,7 @@ let canciones = [
     duracion: "3:12",
     album: 4,
     nombreAlbum: "One Direction",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 38,
@@ -350,7 +350,7 @@ let canciones = [
     duracion: "3:39",
     album: 4,
     nombreAlbum: "One Direction",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 39,
@@ -358,7 +358,7 @@ let canciones = [
     duracion: "3:03",
     album: 4,
     nombreAlbum: "One Direction",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 40,
@@ -366,7 +366,7 @@ let canciones = [
     duracion: "3:48",
     album: 4,
     nombreAlbum: "One Direction",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 41,
@@ -374,7 +374,7 @@ let canciones = [
     duracion: "3:47",
     album: 4,
     nombreAlbum: "One Direction",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 42,
@@ -382,7 +382,7 @@ let canciones = [
     duracion: "3:20",
     album: 4,
     nombreAlbum: "One Direction",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 43,
@@ -390,7 +390,7 @@ let canciones = [
     duracion: "3:57",
     album: 4,
     nombreAlbum: "One Direction",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 44,
@@ -398,7 +398,7 @@ let canciones = [
     duracion: "3:07",
     album: 4,
     nombreAlbum: "One Direction",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 45,
@@ -406,7 +406,7 @@ let canciones = [
     duracion: "3:50",
     album: 4,
     nombreAlbum: "One Direction",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 46,
@@ -414,7 +414,7 @@ let canciones = [
     duracion: "5:55",
     album: "5",
     nombreAlbum: "Queen",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 47,
@@ -422,7 +422,7 @@ let canciones = [
     duracion: "2:01",
     album: "5",
     nombreAlbum: "Queen",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 48,
@@ -430,7 +430,7 @@ let canciones = [
     duracion: "4:56",
     album: "5",
     nombreAlbum: "Queen",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 49,
@@ -438,7 +438,7 @@ let canciones = [
     duracion: "5:44",
     album: "5",
     nombreAlbum: "Queen",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 50,
@@ -446,7 +446,7 @@ let canciones = [
     duracion: "4:08",
     album: 5,
     nombreAlbum: "Queen",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 51,
@@ -454,7 +454,7 @@ let canciones = [
     duracion: "3:29",
     album: 5,
     nombreAlbum: "Queen",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 52,
@@ -462,7 +462,7 @@ let canciones = [
     duracion: "3:01",
     album: 5,
     nombreAlbum: "Queen",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 53,
@@ -470,7 +470,7 @@ let canciones = [
     duracion: "3:36",
     album: 5,
     nombreAlbum: "Queen",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 54,
@@ -478,7 +478,7 @@ let canciones = [
     duracion: "4:56",
     album: 5,
     nombreAlbum: "Queen",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 55,
@@ -486,7 +486,7 @@ let canciones = [
     duracion: "3:40",
     album: 5,
     nombreAlbum: "Queen",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 56,
@@ -494,7 +494,7 @@ let canciones = [
     duracion: "4:18",
     album: 5,
     nombreAlbum: "Queen",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 57,
@@ -502,7 +502,7 @@ let canciones = [
     duracion: "3:56",
     album: 6,
     nombreAlbum: "Radiohead",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 58,
@@ -510,7 +510,7 @@ let canciones = [
     duracion: "4:21",
     album: 6,
     nombreAlbum: "Radiohead",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 59,
@@ -518,7 +518,7 @@ let canciones = [
     duracion: "6:23",
     album: 6,
     nombreAlbum: "Radiohead",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 60,
@@ -526,7 +526,7 @@ let canciones = [
     duracion: "3:48",
     album: 6,
     nombreAlbum: "Radiohead",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 61,
@@ -534,7 +534,7 @@ let canciones = [
     duracion: "4:50",
     album: 6,
     nombreAlbum: "Radiohead",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 62,
@@ -542,7 +542,7 @@ let canciones = [
     duracion: "4:13",
     album: 6,
     nombreAlbum: "Radiohead",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 63,
@@ -550,7 +550,7 @@ let canciones = [
     duracion: "4:11",
     album: 6,
     nombreAlbum: "Radiohead",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 64,
@@ -558,7 +558,7 @@ let canciones = [
     duracion: "4:24",
     album: 6,
     nombreAlbum: "Radiohead",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 65,
@@ -566,7 +566,7 @@ let canciones = [
     duracion: "5:09",
     album: 6,
     nombreAlbum: "Radiohead",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 66,
@@ -574,7 +574,7 @@ let canciones = [
     duracion: "3:40",
     album: 6,
     nombreAlbum: "Radiohead",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 67,
@@ -582,7 +582,7 @@ let canciones = [
     duracion: "3:37",
     album: 7,
     nombreAlbum: "Soda Stereo",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 68,
@@ -590,7 +590,7 @@ let canciones = [
     duracion: "4:23",
     album: 7,
     nombreAlbum: "Soda Stereo",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 69,
@@ -598,7 +598,7 @@ let canciones = [
     duracion: "5:43",
     album: 7,
     nombreAlbum: "Soda Stereo",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 70,
@@ -606,7 +606,7 @@ let canciones = [
     duracion: "3:21",
     album: 7,
     nombreAlbum: "Soda Stereo",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 71,
@@ -614,7 +614,7 @@ let canciones = [
     duracion: "3:25",
     album: 7,
     nombreAlbum: "Soda Stereo",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 72,
@@ -622,7 +622,7 @@ let canciones = [
     duracion: "4:18",
     album: 7,
     nombreAlbum: "Soda Stereo",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 73,
@@ -630,7 +630,7 @@ let canciones = [
     duracion: "4:55",
     album: 7,
     nombreAlbum: "Soda Stereo",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 74,
@@ -638,7 +638,7 @@ let canciones = [
     duracion: "4:18",
     album: 7,
     nombreAlbum: "Soda Stereo",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 75,
@@ -646,7 +646,7 @@ let canciones = [
     duracion: "3:21",
     album: 7,
     nombreAlbum: "Soda Stereo",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 76,
@@ -654,7 +654,7 @@ let canciones = [
     duracion: "4:55",
     album: 7,
     nombreAlbum: "Soda Stereo",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 77,
@@ -662,7 +662,7 @@ let canciones = [
     duracion: "3:44",
     album: 8,
     nombreAlbum: "The Rolling Stones",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 78,
@@ -670,7 +670,7 @@ let canciones = [
     duracion: "4:32",
     album: 8,
     nombreAlbum: "The Rolling Stones",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 79,
@@ -678,7 +678,7 @@ let canciones = [
     duracion: "6:18",
     album: 8,
     nombreAlbum: "The Rolling Stones",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 80,
@@ -686,7 +686,7 @@ let canciones = [
     duracion: "4:31",
     album: 8,
     nombreAlbum: "The Rolling Stones",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 81,
@@ -694,7 +694,7 @@ let canciones = [
     duracion: "3:33",
     album: 8,
     nombreAlbum: "The Rolling Stones",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 82,
@@ -702,7 +702,7 @@ let canciones = [
     duracion: "5:43",
     album: 8,
     nombreAlbum: "The Rolling Stones",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 83,
@@ -710,7 +710,7 @@ let canciones = [
     duracion: "4:49",
     album: 8,
     nombreAlbum: "The Rolling Stones",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 84,
@@ -718,7 +718,7 @@ let canciones = [
     duracion: "3:51",
     album: 8,
     nombreAlbum: "The Rolling Stones",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 85,
@@ -726,7 +726,7 @@ let canciones = [
     duracion: "3:16",
     album: 8,
     nombreAlbum: "The Rolling Stones",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 86,
@@ -734,7 +734,7 @@ let canciones = [
     duracion: "7:28",
     album: 8,
     nombreAlbum: "The Rolling Stones",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 87,
@@ -742,7 +742,7 @@ let canciones = [
     duracion: "3:12",
     album: 9,
     nombreAlbum: "The Score",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 88,
@@ -750,7 +750,7 @@ let canciones = [
     duracion: "3:11",
     album: 9,
     nombreAlbum: "The Score",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 89,
@@ -758,7 +758,7 @@ let canciones = [
     duracion: "3:00",
     album: 9,
     nombreAlbum: "The Score",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 90,
@@ -766,7 +766,7 @@ let canciones = [
     duracion: "2:55",
     album: 9,
     nombreAlbum: "The Score",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 91,
@@ -774,7 +774,7 @@ let canciones = [
     duracion: "2:42",
     album: 9,
     nombreAlbum: "The Score",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 92,
@@ -782,7 +782,7 @@ let canciones = [
     duracion: "2:59",
     album: 9,
     nombreAlbum: "The Score",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 93,
@@ -790,7 +790,7 @@ let canciones = [
     duracion: "3:02",
     album: 9,
     nombreAlbum: "The Score",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 94,
@@ -798,7 +798,7 @@ let canciones = [
     duracion: "3:17",
     album: 9,
     nombreAlbum: "The Score",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 95,
@@ -806,7 +806,7 @@ let canciones = [
     duracion: "2:57",
     album: 9,
     nombreAlbum: "The Score",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   },
   {
     id: 96,
@@ -814,7 +814,7 @@ let canciones = [
     duracion: "3:18",
     album: 9,
     nombreAlbum: "The Score",
-    reproduccion: getRandomInt(1, 100),
+    reproduccion: getRandomInt(1000, 100000),
   }
 
 ];
