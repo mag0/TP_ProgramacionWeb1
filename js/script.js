@@ -59,9 +59,6 @@ if (musicaSonando) {
   `
 }
 
-
-
-
 function buscarUsr(usuarioLogueado) {
   return usuarioss.findIndex((e) => {
     return (e.usuarioLogueado = usuarioLogueado);

@@ -96,3 +96,11 @@ footer{
     object-fit: cover;
 }
 
+.fa,.fas,.far{
+    cursor: pointer;
+}
+
+.durac,.reprod,.contPlay{
+    margin-left: auto;
+    margin-right: auto;
+}
