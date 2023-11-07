@@ -25,6 +25,9 @@ btnPagar.addEventListener("click", e => {
     } else if (cvc.value == 000 || cvc.value == 999 || (cvc.value).length != 3) {
 
         msjErr_cvc.innerHTML = "Valor incorrecto"
+    } else {
+        dialog.style.display = "flex"
+        dialog.showModal()
     }
 })
 
@@ -39,12 +42,6 @@ caracteristicasPlan.forEach(e => {
 });
 
 
-
-btnPagar.addEventListener("click", (e) => {
-    e.preventDefault()
-    dialog.style.display = "flex"
-    dialog.showModal()
-})
 
 btnModal.addEventListener("click", e => {
     e.preventDefault()
