@@ -7,6 +7,7 @@ let msjErr_cvc = document.querySelector("#msjErr_cvc")
 let precio = document.querySelector("#precio")
 let cardBody = document.querySelector(".cardBody")
 let dialog = document.querySelector("dialog")
+dialog.style.display = "none"
 
 let caracteristicasPlan = JSON.parse(localStorage.getItem("caracteristicasPlan"))
 let btnModal = document.querySelector("#btnModal")
@@ -41,6 +42,7 @@ caracteristicasPlan.forEach(e => {
 
 btnPagar.addEventListener("click", (e) => {
     e.preventDefault()
+    dialog.style.display = "flex"
     dialog.showModal()
 })
 

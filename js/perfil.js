@@ -7,6 +7,7 @@ cerrarSesion.addEventListener("click", () => {
   localStorage.setItem("conectado", false);
 });
 let modal = document.querySelector("#modal")
+modal.style.display = "none"
 let modalCerrar = document.querySelector("#modalCerrar")
 let modalHome = document.querySelector("#modalHome")
 
@@ -31,12 +32,14 @@ btn.addEventListener("click", (e) => {
   e.preventDefault();
   if (!campoVacios() && usuarioValido(nombre.value) && contraseniasIguales()) {
     registrarUsuario();
+    modal.style.display = "flex"
     modal.showModal()
   }
 });
 
 modalCerrar.addEventListener("click",(e)=>{
   e.preventDefault()
+  modal.style.display = "none"
   modal.close()
 })
 
