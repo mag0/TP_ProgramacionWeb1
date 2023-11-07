@@ -65,7 +65,7 @@ function esFavorito(id, usuarioLogueado) {
 
 let musicaSonandoStar = document.getElementById("musicaSonandoStar")
 
-
+if(musicaSonandoStar!=null)
 musicaSonandoStar.addEventListener("click", d => {
   let idAlbum = musicaSonando
   let idxUsuario = buscarUsr(usuario)
