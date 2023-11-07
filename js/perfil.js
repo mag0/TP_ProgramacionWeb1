@@ -6,6 +6,9 @@ const cerrarSesion = document.getElementById("cerrarSesion");
 cerrarSesion.addEventListener("click", () => {
   localStorage.setItem("conectado", false);
 });
+let modal = document.querySelector("#modal")
+let modalCerrar = document.querySelector("#modalCerrar")
+let modalHome = document.querySelector("#modalHome")
 
 const nombre = document.getElementById("usuario");
 const contrasenia = document.getElementById("inputPassword");
@@ -15,6 +18,7 @@ const fechaDeNacimiento = document.getElementById("fechaNac");
 const msj = document.getElementById("msj");
 const btn = document.getElementById("btn");
 const elimUsr = document.getElementById("eliminarUsr")
+
 
 nombre.value = usuarios[buscarUsuario(usuarioConectado)].nombre;
 contrasenia.value = ""
@@ -27,9 +31,18 @@ btn.addEventListener("click", (e) => {
   e.preventDefault();
   if (!campoVacios() && usuarioValido(nombre.value) && contraseniasIguales()) {
     registrarUsuario();
-    location.href = "./home.html";
+    modal.showModal()
   }
 });
+
+modalCerrar.addEventListener("click",(e)=>{
+  e.preventDefault()
+  modal.close()
+})
+
+modalHome.addEventListener("click",e=>{
+  location.href="../pages/home.html"
+})
 
 function usuarioValido(nombre) {
   let usuarioValido = true;

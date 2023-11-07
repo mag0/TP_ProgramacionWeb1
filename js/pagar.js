@@ -6,18 +6,22 @@ let msjErr_targeta = document.querySelector("#msjErr_targeta")
 let msjErr_cvc = document.querySelector("#msjErr_cvc")
 let precio = document.querySelector("#precio")
 let cardBody = document.querySelector(".cardBody")
-let caracteristicasPlan = JSON.parse(localStorage.getItem("caracteristicasPlan"))
-console.log(caracteristicasPlan);
-planSpan.innerHTML= localStorage.getItem("planElegido")
+let dialog = document.querySelector("dialog")
 
-btnPagar.addEventListener("click",e=>{
+let caracteristicasPlan = JSON.parse(localStorage.getItem("caracteristicasPlan"))
+let btnModal = document.querySelector("#btnModal")
+let conectado = JSON.parse(localStorage.getItem("conectado"))
+
+planSpan.innerHTML = localStorage.getItem("planElegido")
+
+btnPagar.addEventListener("click", e => {
     e.preventDefault()
     msjErr_targeta.innerHTML = ""
     msjErr_cvc.innerHTML = ""
-    if((nroTargeta.value).length != 16){
+    if ((nroTargeta.value).length != 16) {
         msjErr_targeta.innerHTML = "Valor incorrecto"
-        
-    }else if(cvc.value==000 || cvc.value==999 || (cvc.value).length != 3){
+
+    } else if (cvc.value == 000 || cvc.value == 999 || (cvc.value).length != 3) {
 
         msjErr_cvc.innerHTML = "Valor incorrecto"
     }
@@ -26,9 +30,25 @@ btnPagar.addEventListener("click",e=>{
 precio.innerHTML = localStorage.getItem("precio")
 
 
-cardBody.innerHTML=""
+cardBody.innerHTML = ""
 caracteristicasPlan.forEach(e => {
-    cardBody.innerHTML+=`
+    cardBody.innerHTML += `
     <p>${e}</p>
     `
 });
+
+
+
+btnPagar.addEventListener("click", (e) => {
+    e.preventDefault()
+    dialog.showModal()
+})
+
+btnModal.addEventListener("click", e => {
+    e.preventDefault()
+    if (conectado) {
+        location.href = "../pages/home.html"
+    } else {
+        location.href = "../index.html"
+    }
+})
