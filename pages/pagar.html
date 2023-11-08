@@ -1,86 +1,82 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Spotilam Pago</title>
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/pagar.css" />
-  </head>
 
-  <body>
-    <div class="menu">
-      <main>
-        <div class="titulo">
-          <h1>Elegiste el <span id="planSpan"></span></h1>
-        </div>
-        <section class="plan">
-          <article class="imagen">
-            <img src="../img/premium.jpg" alt="imagen premium" />
-          </article>
-          <article class="card">
-            <div class="cardHeader">
-              <h3 id="precio">$10</h3>
-              <p>Primer mes gratis</p>
-            </div>
-            <div class="cardBody">
-              <p>✔ 1 cuenta Premium verificada</p>
-              <p>✔ Descuento para estudiantes que cumplen con los requisitos</p>
-              <p>✔ Cancelá cuando quieras</p>
-              <p>✔ Te enviaremos un recordatorio 7 días antes de cobrarte</p>
-            </div>
-          </article>
-        </section>
-        <section class="pago">
-          <form method="post">
-            <h2>Información de Pago</h2>
-            <label for="numero_tarjeta">Número de Tarjeta:</label>
-            <input
-              type="number"
-              id="numero_tarjeta"
-              name="numero_tarjeta"
-              required
-            />
-            <p id="msjErr_targeta" style="color: red"></p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spotilam Pago</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/pagar.css" />
+</head>
 
-            <label for="vto">VTO:</label>
-            <input type="date" id="vto" name="vto" required />
+<body>
+  <div class="menu">
+    <main>
+      <div class="titulo">
+        <h1>Elegiste el <span id="planSpan"></span></h1>
+      </div>
+      <section class="plan">
+        <article class="imagen">
+          <img src="../img/premium.jpg" alt="imagen premium" />
+        </article>
+        <article class="card">
+          <div class="cardHeader">
+            <h3 id="precio">$10</h3>
+            <p>Primer mes gratis</p>
+          </div>
+          <div class="cardBody">
+            <p>✔ 1 cuenta Premium verificada</p>
+            <p>✔ Descuento para estudiantes que cumplen con los requisitos</p>
+            <p>✔ Cancelá cuando quieras</p>
+            <p>✔ Te enviaremos un recordatorio 7 días antes de cobrarte</p>
+          </div>
+        </article>
+      </section>
+      <section class="pago">
+        <form method="post">
+          <h2>Información de Pago</h2>
+          <label for="numero_tarjeta">Número de Tarjeta:</label>
+          <input type="number" id="numero_tarjeta" name="numero_tarjeta" required />
+          <p id="msjErr_targeta" style="color: red"></p>
 
-            <label for="cvc">CVC:</label>
-            <input type="number" id="cvc" name="cvc" required />
-            <p id="msjErr_cvc" style="color: red"></p>
+          <label for="vto">VTO:</label>
+          <input type="date" id="vto" name="vto" required />
 
-            <label for="nombre_apellido">Nombre y Apellido:</label>
-            <input
-              type="text"
-              id="nombre_apellido"
-              name="nombre_apellido"
-              required
-            />
+          <label for="cvc">CVC:</label>
+          <input type="number" id="cvc" name="cvc" required />
+          <p id="msjErr_cvc" style="color: red"></p>
 
-            <button type="submit" id="btnPagar">Pagar</button>
-            <button type="button" onclick="window.location.href='home.html'">
-              Cancelar
-            </button>
-          </form>
-        </section>
-      </main>
+          <label for="nombre_apellido">Nombre y Apellido:</label>
+          <input type="text" id="nombre_apellido" name="nombre_apellido" required />
+
+          <button type="submit" id="btnPagar">Pagar</button>
+          <button type="button" onclick="window.location.href='home.html'">
+            Cancelar
+          </button>
+        </form>
+      </section>
+    </main>
+  </div>
+  <footer>
+    <p>
+      Guerreiro Martín Andrés, 41646090 -
+      Alimonta Axel Ian, 37864941 -
+
+    </p>
+    <p>
+      Pretto Paseiro Gian Franco, 41077146 -
+      Taylor Darío Javier, 38157667
+    </p>
+  </footer>
+  <dialog>
+    <p>
+      Pago exitoso!
+    </p>
+    <div class="btns">
+      <button id="btnModal">Aceptar</button>
     </div>
-    <footer>
-      <p>
-        Guerreiro Martín Andrés, 41646090 - Alimonta Axel Ian, 37864941 - Pretto
-        Paseiro Gian Franco, 41077146
-      </p>
-      <p>Taylor Darío Javier, 38157667 - Della Vella Julián 35722388</p>
-    </footer>
-    <dialog>
-        <p>
-            Pago exitoso!
-        </p>
-        <div class="btns">
-            <button id="btnModal">Aceptar</button>
-        </div>
-    </dialog>
-    <script src="../js/pagar.js"></script>
-  </body>
+  </dialog>
+  <script src="../js/pagar.js"></script>
+</body>
+
 </html>

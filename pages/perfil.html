@@ -1,135 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Spotify</title>
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/home.css" />
-    <link rel="stylesheet" href="../css/perfil.css" />
-    <script
-      src="https://kit.fontawesome.com/ac3c7794f3.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
 
-  <body>
-    <div class="contenedor_pagina">
-      <div class="menu">
-        <header>
-          <div class="perfil">
-            <div class="nombre">
-              <h2 id="nombreUsuario">Nombre Usuario</h2>
-              <a id="cerrarSesion" href="../index.html">Cerrar sesion</a>
-            </div>
-            <a class="foto" href="perfil.html">
-              <img src="../img/avatar_user.png" alt="Avatar del usuario" />
-            </a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spotify</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/home.css" />
+  <link rel="stylesheet" href="../css/perfil.css" />
+  <script src="https://kit.fontawesome.com/ac3c7794f3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="contenedor_pagina">
+    <div class="menu">
+      <header>
+        <div class="perfil">
+          <div class="nombre">
+            <h2 id="nombreUsuario">Nombre Usuario</h2>
+            <a id="cerrarSesion" href="../index.html">Cerrar sesion</a>
           </div>
-        </header>
+          <a class="foto" href="perfil.html">
+            <img src="../img/avatar_user.png" alt="Avatar del usuario" />
+          </a>
+        </div>
+      </header>
 
-        <section>
-          <div class="formulario">
-            <form method="get">
-              <div>
-                <label for="usuario" class="formulario_opcion">Usuario</label>
-                <input
-                  id="usuario"
-                  name="usuario"
-                  type="name"
-                  class="input__cont"
-                  placeholder="Nombre y Apellido"
-                />
-              </div>
-              <div>
-                <label for="inputPassword" class="formulario_opcion"
-                  >Contraseña</label
-                >
-                <input
-                  id="inputPassword"
-                  name="inputPassword"
-                  type="text"
-                  class="input__cont"
-                  placeholder="Contraseña"
-                />
-              </div>
-              <div>
-                <label for="repetirContra" class="formulario_opcion"
-                  >Repetir Contraseña</label
-                >
-                <input
-                  id="repetirContra"
-                  name="repetirContra"
-                  type="text"
-                  class="input__cont"
-                  placeholder="Repetir Contraseña"
-                />
-              </div>
-              <div>
-                <label for="fechaNac" class="formulario_opcion"
-                  >Fecha de Nacimiento</label
-                >
-                <input
-                  id="fechaNac"
-                  name="fechaNac"
-                  type="date"
-                  class="input__cont"
-                  placeholder="00/00/0000"
-                />
-              </div>
-              <div>
-                <label for="mail" class="formulario_opcion">Email</label>
-                <input
-                  id="mail"
-                  name="mail"
-                  type="email"
-                  class="input__cont"
-                  placeholder="Email"
-                />
-              </div>
-              <div
-                id="msj"
-                style="
+      <section>
+        <div class="formulario">
+          <form method="get">
+            <div>
+              <label for="usuario" class="formulario_opcion">Usuario</label>
+              <input id="usuario" name="usuario" type="name" class="input__cont" placeholder="Nombre y Apellido" />
+            </div>
+            <div>
+              <label for="inputPassword" class="formulario_opcion">Contraseña</label>
+              <input id="inputPassword" name="inputPassword" type="text" class="input__cont" placeholder="Contraseña" />
+            </div>
+            <div>
+              <label for="repetirContra" class="formulario_opcion">Repetir Contraseña</label>
+              <input id="repetirContra" name="repetirContra" type="text" class="input__cont"
+                placeholder="Repetir Contraseña" />
+            </div>
+            <div>
+              <label for="fechaNac" class="formulario_opcion">Fecha de Nacimiento</label>
+              <input id="fechaNac" name="fechaNac" type="date" class="input__cont" placeholder="00/00/0000" />
+            </div>
+            <div>
+              <label for="mail" class="formulario_opcion">Email</label>
+              <input id="mail" name="mail" type="email" class="input__cont" placeholder="Email" />
+            </div>
+            <div id="msj" style="
                   font-size: 0.8em;
                   text-align: center;
                   color: rgb(246, 82, 82);
-                "
-              ></div>
-            </form>
-          </div>
-          <div class="hipervinculos">
-            <a href="#" class="opcion" onclick="location.href='premium.html'"
-              >Premium</a
-            >
-            <a href="#" id="eliminarUsr" class="opcion">Eliminar Usuario</a>
-          </div>
-          <div class="botones">
-            <button class="btn" onclick="location.href='../pages/home.html'">
-              Volver al Home
-            </button>
-            <button id="btn" class="btn">Guardar</button>
-          </div>
-        </section>
-      </div>
-    </div>
-
-    <footer>
-      <p>
-        Guerreiro Martín Andrés, 41646090 - Alimonta Axel Ian, 37864941 - Pretto
-        Paseiro Gian Franco, 41077146
-      </p>
-      <p>Taylor Darío Javier, 38157667 - Della Vella Julián 35722388</p>
-    </footer>
-
-    <dialog id="modal">
-        <p>Datos guardados correctamente</p>
-        <div class="btns">
-            <button id="modalCerrar">Cerrar</button>
-            <button id="modalHome">Volver al Home</button>
+                "></div>
+          </form>
         </div>
-    </dialog>
+        <div class="hipervinculos">
+          <a href="#" class="opcion" onclick="location.href='premium.html'">Premium</a>
+          <a href="#" id="eliminarUsr" class="opcion">Eliminar Usuario</a>
+        </div>
+        <div class="botones">
+          <button class="btn" onclick="location.href='../pages/home.html'">
+            Volver al Home
+          </button>
+          <button id="btn" class="btn">Guardar</button>
+        </div>
+      </section>
+    </div>
+  </div>
 
-    
-    <script src="../js/perfil.js"></script>
-  </body>
+  <footer>
+    <p>
+      Guerreiro Martín Andrés, 41646090 -
+      Alimonta Axel Ian, 37864941 -
+
+    </p>
+    <p>
+      Pretto Paseiro Gian Franco, 41077146 -
+      Taylor Darío Javier, 38157667
+    </p>
+  </footer>
+
+  <dialog id="modal">
+    <p>Datos guardados correctamente</p>
+    <div class="btns">
+      <button id="modalCerrar">Cerrar</button>
+      <button id="modalHome">Volver al Home</button>
+    </div>
+  </dialog>
+
+
+  <script src="../js/perfil.js"></script>
+</body>
+
 </html>
