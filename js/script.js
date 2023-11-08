@@ -4,7 +4,6 @@ let musicaSonando = localStorage.getItem("musicaSonando");
 if(musicaSonando == null){
   musicaSonando = "1"
 }
-console.log(musicaSonando);
 
 nombreUsuario.textContent = usuario;
 let albumss = JSON.parse(localStorage.getItem("albums"));

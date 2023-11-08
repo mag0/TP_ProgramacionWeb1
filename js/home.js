@@ -34,8 +34,9 @@ star.forEach(function (star) {
     let idAlbum = star.parentNode.parentNode.id;
     let idxUsuario = buscarUsuario(usuarioLogueado);
 
-    console.log(musicaSonando)
-
+    console.log(usuarios[0]);
+    console.log(usuarios[1]);
+    console.log(usuarioLogueado);
     if (esFavorito(idAlbum, usuarioLogueado)) {
       let cancionesFavoritas = usuarios[idxUsuario].albumFav.filter((e) => {
         return e != idAlbum;
@@ -61,7 +62,6 @@ const albumsArr = document.querySelectorAll(".album a img");
 albumsArr.forEach(e => {
   e.addEventListener("click", d => {
     let idAlbm = e.parentNode.parentNode.id
-    console.log(idAlbm);
     localStorage.setItem("musicaSonando", idAlbm)
     location.href = "./musicaSonando.html"
   })
@@ -69,9 +69,12 @@ albumsArr.forEach(e => {
 
 
 function buscarUsuario(usuarioLogueado) {
-  return usuarios.findIndex((e) => {
-    return (e.usuarioLogueado = usuarioLogueado);
+  console.log(usuarioLogueado);
+  let idx = usuarios.findIndex((e,i) => {
+    return (e.nombre == usuarioLogueado)
   });
+  console.log(idx);
+  return idx
 }
 
 function esFavorito(id, usuarioLogueado) {

@@ -33,10 +33,13 @@ function esAlbumFav(idx) {
 
 
 function buscarUsuario(usuarioLogueado) {
-    return usuarios.findIndex((e) => {
-        return (e.usuarioLogueado = usuarioLogueado);
+    console.log(usuarioLogueado);
+    let idx = usuarios.findIndex((e,i) => {
+      return (e.nombre == usuarioLogueado)
     });
-}
+    console.log(idx);
+    return idx
+  }
 
 
 function renderizarCanciones() {
