@@ -34,9 +34,7 @@ star.forEach(function (star) {
     let idAlbum = star.parentNode.parentNode.id;
     let idxUsuario = buscarUsuario(usuarioLogueado);
 
-    console.log(usuarios[0]);
-    console.log(usuarios[1]);
-    console.log(usuarioLogueado);
+
     if (esFavorito(idAlbum, usuarioLogueado)) {
       let cancionesFavoritas = usuarios[idxUsuario].albumFav.filter((e) => {
         return e != idAlbum;
@@ -69,11 +67,9 @@ albumsArr.forEach(e => {
 
 
 function buscarUsuario(usuarioLogueado) {
-  console.log(usuarioLogueado);
   let idx = usuarios.findIndex((e,i) => {
     return (e.nombre == usuarioLogueado)
   });
-  console.log(idx);
   return idx
 }
 
