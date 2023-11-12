@@ -19,11 +19,16 @@ const fechaDeNacimiento = document.getElementById("fechaNac");
 const msj = document.getElementById("msj");
 const btn = document.getElementById("btn");
 const elimUsr = document.getElementById("eliminarUsr")
+const premiumOpc = document.getElementById("premiumOpc")
+
+if (usuarios[buscarUsuario(usuarioConectado)].premium == true) {
+  premiumOpc.style.display = "none"
+}
 
 
 nombre.value = usuarios[buscarUsuario(usuarioConectado)].nombre;
-contrasenia.value = ""
-contrasenia_espejo.value = ""
+contrasenia.value = decodificarContrasenia(usuarios[buscarUsuario(usuarioConectado)].contrasenia);
+contrasenia_espejo.value = decodificarContrasenia(usuarios[buscarUsuario(usuarioConectado)].contrasenia);
 email.value = usuarios[buscarUsuario(usuarioConectado)].email;
 fechaDeNacimiento.value =
   usuarios[buscarUsuario(usuarioConectado)].fecha_de_nacimiento;
@@ -93,6 +98,20 @@ function codificarContrasenia(cad) {
 
   return cad2 + cad1;
 }
+function decodificarContrasenia(cad) {
+  let cad1
+  let cad2
+  if (cad.length % 2 == 0) {
+      cad1 = cad.substring(0, parseInt(cad.length / 2));
+      cad2 = cad.substring(parseInt(cad.length / 2), cad.length);
+  }else{
+      cad1 = cad.substring(0, parseInt(cad.length / 2)+1);
+      cad2 = cad.substring(parseInt(cad.length / 2)+1, cad.length);
+  }
+
+
+  return cad2 + cad1;
+}
 
 function registrarUsuario() {
 
@@ -103,16 +122,18 @@ function registrarUsuario() {
     fecha_de_nacimiento: fechaDeNacimiento.value,
     canFav: usuarios[buscarUsuario(usuarioConectado)].canFav,
     albumFav: usuarios[buscarUsuario(usuarioConectado)].albumFav,
+    premium: usuarios[buscarUsuario(usuarioConectado)].premium,
   };
   eliminarUsr(usuarioConectado)
   usuarios.push(usuario);
   localStorage.setItem("usuarioConectado", nombre.value)
   localStorage.setItem("usuarios", JSON.stringify(usuarios));
 }
-function buscarUsuario(usuarioConectado) {
-  return usuarios.findIndex((e) => {
-    return (e.usuarioConectado = usuarioConectado);
+function buscarUsuario(usuarioLogueado) {
+  let idx = usuarios.findIndex((e,i) => {
+    return (e.nombre == usuarioLogueado)
   });
+  return idx
 }
 
 function eliminarUsr(nombreUsr) {

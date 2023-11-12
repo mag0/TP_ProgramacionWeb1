@@ -8,6 +8,9 @@ const favorito = false;
 const contenedorAlbums = document.getElementById("albums");
 let usuarioLogueado = localStorage.getItem("usuarioConectado");
 
+
+
+
 for (let i = 0; i < albums.length; i++) {
   let idAlbum = albums[i].id;
   if (!esFavorito(idAlbum, usuarioLogueado)) {
@@ -67,7 +70,7 @@ albumsArr.forEach(e => {
 
 
 function buscarUsuario(usuarioLogueado) {
-  let idx = usuarios.findIndex((e,i) => {
+  let idx = usuarios.findIndex((e, i) => {
     return (e.nombre == usuarioLogueado)
   });
   return idx

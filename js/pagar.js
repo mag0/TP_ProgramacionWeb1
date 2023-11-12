@@ -8,6 +8,8 @@ let precio = document.querySelector("#precio")
 let cardBody = document.querySelector(".cardBody")
 let dialog = document.querySelector("dialog")
 dialog.style.display = "none"
+let usuarios = JSON.parse(localStorage.getItem("usuarios"))
+let usuarioConectado = localStorage.getItem("usuarioConectado");
 
 let caracteristicasPlan = JSON.parse(localStorage.getItem("caracteristicasPlan"))
 let btnModal = document.querySelector("#btnModal")
@@ -27,6 +29,8 @@ btnPagar.addEventListener("click", e => {
         msjErr_cvc.innerHTML = "Valor incorrecto"
     } else {
         dialog.style.display = "flex"
+        usuarios[buscarUsuario(usuarioConectado)].premium = true
+        localStorage.setItem("usuarios",JSON.stringify(usuarios))
         dialog.showModal()
     }
 })
@@ -51,3 +55,11 @@ btnModal.addEventListener("click", e => {
         location.href = "../index.html"
     }
 })
+
+function buscarUsuario(usuarioLogueado) {
+    let idx = usuarios.findIndex((e,i) => {
+      return (e.nombre == usuarioLogueado)
+    });
+    return idx
+  }
+  

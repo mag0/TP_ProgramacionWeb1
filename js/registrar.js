@@ -62,6 +62,8 @@ function codificarContrasenia(cad) {
   return cad2 + cad1;
 }
 
+
+
 function registrarUsuario() {
   let usuario = {
     nombre: nombre.value,
@@ -70,6 +72,7 @@ function registrarUsuario() {
     fecha_de_nacimiento: fechaDeNacimiento.value,
     canFav: [],
     albumFav: [],
+    premium:false
   };
 
   usuarios.push(usuario);
