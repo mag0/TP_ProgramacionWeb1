@@ -6,10 +6,10 @@ const cerrarSesion = document.getElementById("cerrarSesion");
 cerrarSesion.addEventListener("click", () => {
   localStorage.setItem("conectado", false);
 });
-let modal = document.querySelector("#modal")
-modal.style.display = "none"
-let modalCerrar = document.querySelector("#modalCerrar")
-let modalHome = document.querySelector("#modalHome")
+let modal = document.querySelector("#modal");
+modal.style.display = "none";
+let modalCerrar = document.querySelector("#modalCerrar");
+let modalHome = document.querySelector("#modalHome");
 
 const nombre = document.getElementById("usuario");
 const contrasenia = document.getElementById("inputPassword");
@@ -18,17 +18,20 @@ const email = document.getElementById("mail");
 const fechaDeNacimiento = document.getElementById("fechaNac");
 const msj = document.getElementById("msj");
 const btn = document.getElementById("btn");
-const elimUsr = document.getElementById("eliminarUsr")
-const premiumOpc = document.getElementById("premiumOpc")
+const elimUsr = document.getElementById("eliminarUsr");
+const premiumOpc = document.getElementById("premiumOpc");
 
 if (usuarios[buscarUsuario(usuarioConectado)].premium == true) {
-  premiumOpc.style.display = "none"
+  premiumOpc.style.display = "none";
 }
 
-
 nombre.value = usuarios[buscarUsuario(usuarioConectado)].nombre;
-contrasenia.value = decodificarContrasenia(usuarios[buscarUsuario(usuarioConectado)].contrasenia);
-contrasenia_espejo.value = decodificarContrasenia(usuarios[buscarUsuario(usuarioConectado)].contrasenia);
+contrasenia.value = decodificarContrasenia(
+  usuarios[buscarUsuario(usuarioConectado)].contrasenia
+);
+contrasenia_espejo.value = decodificarContrasenia(
+  usuarios[buscarUsuario(usuarioConectado)].contrasenia
+);
 email.value = usuarios[buscarUsuario(usuarioConectado)].email;
 fechaDeNacimiento.value =
   usuarios[buscarUsuario(usuarioConectado)].fecha_de_nacimiento;
@@ -37,25 +40,25 @@ btn.addEventListener("click", (e) => {
   e.preventDefault();
   if (!campoVacios() && usuarioValido(nombre.value) && contraseniasIguales()) {
     registrarUsuario();
-    modal.style.display = "flex"
-    modal.showModal()
+    modal.style.display = "flex";
+    modal.showModal();
+    localStorage.setItem("conectado", true);
   }
 });
 
-modalCerrar.addEventListener("click",(e)=>{
-  e.preventDefault()
-  modal.style.display = "none"
-  modal.close()
-})
+modalCerrar.addEventListener("click", (e) => {
+  e.preventDefault();
+  modal.style.display = "none";
+  modal.close();
+});
 
-modalHome.addEventListener("click",e=>{
-  location.href="../pages/home.html"
-})
+modalHome.addEventListener("click", (e) => {
+  location.href = "../pages/home.html";
+});
 
 function usuarioValido(nombre) {
   let usuarioValido = true;
-  if (usuarioConectado == nombre)
-    return true
+  if (usuarioConectado == nombre) return true;
   usuarios.forEach((e) => {
     if (e.nombre == nombre) {
       usuarioValido = false;
@@ -99,22 +102,20 @@ function codificarContrasenia(cad) {
   return cad2 + cad1;
 }
 function decodificarContrasenia(cad) {
-  let cad1
-  let cad2
+  let cad1;
+  let cad2;
   if (cad.length % 2 == 0) {
-      cad1 = cad.substring(0, parseInt(cad.length / 2));
-      cad2 = cad.substring(parseInt(cad.length / 2), cad.length);
-  }else{
-      cad1 = cad.substring(0, parseInt(cad.length / 2)+1);
-      cad2 = cad.substring(parseInt(cad.length / 2)+1, cad.length);
+    cad1 = cad.substring(0, parseInt(cad.length / 2));
+    cad2 = cad.substring(parseInt(cad.length / 2), cad.length);
+  } else {
+    cad1 = cad.substring(0, parseInt(cad.length / 2) + 1);
+    cad2 = cad.substring(parseInt(cad.length / 2) + 1, cad.length);
   }
-
 
   return cad2 + cad1;
 }
 
 function registrarUsuario() {
-
   let usuario = {
     nombre: nombre.value,
     contrasenia: codificarContrasenia(contrasenia.value),
@@ -124,31 +125,31 @@ function registrarUsuario() {
     albumFav: usuarios[buscarUsuario(usuarioConectado)].albumFav,
     premium: usuarios[buscarUsuario(usuarioConectado)].premium,
   };
-  eliminarUsr(usuarioConectado)
+  eliminarUsr(usuarioConectado);
   usuarios.push(usuario);
-  localStorage.setItem("usuarioConectado", nombre.value)
+  localStorage.setItem("usuarioConectado", nombre.value);
   localStorage.setItem("usuarios", JSON.stringify(usuarios));
 }
 function buscarUsuario(usuarioLogueado) {
-  let idx = usuarios.findIndex((e,i) => {
-    return (e.nombre == usuarioLogueado)
+  let idx = usuarios.findIndex((e, i) => {
+    return e.nombre == usuarioLogueado;
   });
-  return idx
+  return idx;
 }
 
 function eliminarUsr(nombreUsr) {
-  usuarios = usuarios.filter(e => {
-    return e.nombre != nombreUsr
-  })
-  localStorage.setItem("usuarios", JSON.stringify(usuarios))
-  localStorage.setItem("conectado", false)
+  usuarios = usuarios.filter((e) => {
+    return e.nombre != nombreUsr;
+  });
+  localStorage.setItem("usuarios", JSON.stringify(usuarios));
+  localStorage.setItem("conectado", false);
 }
 
-elimUsr.addEventListener("click", e => {
-  e.preventDefault()
-  eliminarUsr(usuarioConectado)
-  location.href = "../index.html"
-})
+elimUsr.addEventListener("click", (e) => {
+  e.preventDefault();
+  eliminarUsr(usuarioConectado);
+  location.href = "../index.html";
+});
 
 //la funcion buscarUsuario da el primer indice y no el q debe ser
 //boton eliminar
